@@ -1,177 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
+  <!-- SEO & Meta (as requested) -->
   <title>Dhruvin Shah | Customer Success & Revenue Operations Leader | Helsinki</title>
-
-  <meta name="description" content="Customer Success & Revenue Operations leader with 9+ years scaling B2B SaaS teams. 97% retention rate. Based in Helsinki. Specializing in enterprise account management, CRM optimization, and team scaling." />
-
+  <meta name="description" content="Customer Success & Revenue Operations leader with 9+ years scaling B2B SaaS teams. 97% retention rate. Based in Helsinki. Specializing in enterprise account management, CRM optimization, and team scaling.">
   <meta name="keywords" content="customer success manager, revenue operations, SaaS, B2B, Helsinki, Finland, Salesforce, HubSpot, team scaling, CRM implementation, enterprise account management, customer retention, sales operations, fintech">
 
   <meta property="og:title" content="Dhruvin Shah | Customer Success & Revenue Operations Leader">
   <meta property="og:description" content="9+ years driving B2B SaaS growth. 97% client retention. Enterprise account management specialist based in Helsinki.">
 
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <!-- External style (you already created style.css) -->
+  <link rel="stylesheet" href="style.css">
 
-<body>
+  <!-- Inline CSS additions for layout elements, kept scoped and safe -->
+  <style>
+    :root{
+      --primary:#0f4c75;
+      --accent:#1b9aaa;
+      --muted:#6b7280;
+      --bg:#f8fafc;
+      --card-bg:#ffffff;
+      --glass: rgba(255,255,255,0.75);
+    }
 
-<!-- NAVIGATION -->
-<header class="navbar sticky">
-  <div class="container">
-    <strong>Dhruvin Shah</strong>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#case-studies">Case Studies</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact" class="btn-primary">Schedule a Call</a>
-    </nav>
-  </div>
-</header>
+    /* Layout utilities */
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#0f1724; background:#ffffff; -webkit-font-smoothing:antialiased;}
+    .container{max-width:1100px;margin:0 auto;padding:28px;}
+    a{color:inherit}
 
-<!-- HERO -->
-<section class="hero gradient-bg">
-  <div class="container">
-    <img src="headshot.jpg" alt="Dhruvin Shah headshot" style="width:160px;border-radius:50%;margin-bottom:20px;" />
+    /* Sticky nav */
+    header.navbar{position:sticky;top:0;background:#fff;z-index:1200;border-bottom:1px solid #e6eef0}
+    header.navbar .container{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    header.navbar .brand{display:flex;align-items:center;gap:12px}
+    header.navbar .brand .title{font-weight:800}
+    header.navbar nav a{margin-left:18px;font-weight:600;color:#0f1724}
+    header.navbar nav a.btn-primary{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px}
 
-    <h1>Customer Success & Revenue Operations Leader</h1>
-    <p class="subtitle">
-      B2B SaaS Growth Specialist | 97% Client Retention | Enterprise Account Management | Based in Helsinki 🇫🇮
-    </p>
+    /* Hero */
+    .hero{padding:64px 20px;text-align:center; background: linear-gradient(135deg, #0f4c75 0%, #1b9aaa 100%); color:#ffffff}
+    .hero .headshot{width:180px;height:180px;object-fit:cover;border-radius:50%;border:6px solid rgba(255,255,255,0.15); box-shadow:0 8px 28px rgba(2,6,23,0.18);display:block;margin:0 auto 18px}
+    .hero h1{font-size:2.2rem;margin:8px 0}
+    .subtitle{font-size:1.05rem;opacity:0.98;margin-bottom:18px}
+    .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+    .btn-primary,.btn-secondary{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;transition:all .18s ease}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-secondary{background:transparent;border:2px solid rgba(255,255,255,0.12);color:#fff}
 
-    <div>
-      <a href="#contact" class="btn-primary">Schedule a Call</a>
-      <a href="https://www.linkedin.com/in/dhruvin-s-459197ab/" target="_blank" class="btn-secondary">View LinkedIn Profile</a>
-      <a href="resume.pdf" class="btn-secondary">Download Resume</a>
-    </div>
-  </div>
-</section>
+    /* Banner */
+    .alert-banner{background:#e8f8f5;padding:14px;text-align:center;font-weight:700;color:#064a47;border-top:1px solid #dff2ef;border-bottom:1px solid #dff2ef}
 
-<!-- BANNER -->
-<section class="alert-banner">
-  📌 <strong>Currently exploring Customer Success opportunities with AI-powered B2B SaaS companies</strong> in deal sourcing, M&A, private equity, and financial technology.
-</section>
+    /* Sections */
+    .section{padding:56px 20px}
+    .alt-bg{background:var(--bg)}
+    .card{background:var(--card-bg);border-radius:12px;padding:18px;margin-bottom:16px;box-shadow:0 10px 28px rgba(2,6,23,0.06);transition:transform .22s ease}
+    .card:hover{transform:translateY(-6px)}
+    h2{margin-top:0;color:#0f1724}
+    h3{margin:10px 0;color:#0f1724}
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <div class="container">
-    <h2>Customer Success & Revenue Operations Leader</h2>
+    /* Lists */
+    ul.bullet-grid{margin:14px 0 18px 20px;padding-left:0}
+    ul.bullet-grid li{margin-bottom:10px;line-height:1.45}
 
-    <p>
-      With 9+ years driving sustainable growth in B2B SaaS and FinTech across North America and EU markets,
-      I specialize in building scalable customer success operations that drive retention, expansion, and revenue growth.
-    </p>
+    /* Metrics grid */
+    .metrics-grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .metric{min-width:140px;background:var(--card-bg);padding:14px;border-radius:10px;text-align:center;box-shadow:0 8px 26px rgba(2,6,23,0.06)}
+    .metric strong{display:block;font-size:1.45rem}
 
-    <p><strong>What I Bring:</strong></p>
+    /* Video grid */
+    .videos-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .video-card{background:var(--card-bg);border-radius:10px;padding:12px;box-shadow:0 8px 24px rgba(2,6,23,0.06);display:flex;flex-direction:column;gap:10px}
+    .video-wrap{position:relative;padding-top:56.25%;overflow:hidden;border-radius:8px}
+    .video-wrap iframe{position:absolute;left:0;top:0;width:100%;height:100%;border:0}
 
-    <ul>
-      <li><strong>Customer Success at Scale:</strong> 600+ customers, 97% retention vs. 85% benchmark</li>
-      <li><strong>Revenue Operations Excellence:</strong> Salesforce & HubSpot, +35% efficiency, +25% sales performance</li>
-      <li><strong>Enterprise Account Management:</strong> $50M+ portfolios, $2M+ annual expansion via QBRs</li>
-      <li><strong>Team Scaling & Leadership:</strong> Built and led 70-person distributed teams across 14 states</li>
-      <li><strong>Compliance & Risk:</strong> GDPR-aligned frameworks, 100% regulatory adherence</li>
-    </ul>
-
-    <p><strong>Currently based in Helsinki with valid work permit.</strong> Seeking Customer Success Manager,
-      Revenue Operations, or Sales Operations roles in English-speaking B2B SaaS teams.</p>
-
-    <p><strong>My Ideal Role:</strong> Seed–Series B B2B SaaS where I can scale CS, drive adoption, and grow revenue via retention and expansion.</p>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience" class="section alt-bg">
-  <div class="container">
-    <h2>💼 Experience</h2>
-
-    <h3>Senior Marketing Director / Financial Advisor</h3>
-    <p><strong>Transamerica Financial Advisers, San Jose, CA | May 2019 – Nov 2025</strong></p>
-
-    <ul>
-      <li>Built CS operations managing 600+ enterprise clients across 14 states</li>
-      <li>97% retention, 95%+ CSAT, $2M+ expansion revenue</li>
-      <li>Salesforce + HubSpot CRM transformation (+35% efficiency)</li>
-      <li>Scaled team from 0 → 70 advisors</li>
-    </ul>
-
-    <h3>Marketing Director / Financial Advisor</h3>
-    <p><strong>Transamerica Financial Advisers, San Jose, CA | Mar 2017 – May 2019</strong></p>
-
-    <ul>
-      <li>Scaled customer base from 0 → 300+</li>
-      <li>40% of new revenue from referrals</li>
-      <li>Built advisor enablement & KPI systems</li>
-    </ul>
-
-    <h3>Licensed Financial Associate</h3>
-    <p><strong>Transamerica Financial Advisers, Fresno, CA | Oct 2016 – Mar 2017</strong></p>
-
-    <ul>
-      <li>100+ clients served, 85% conversion rate</li>
-      <li>Client needs analysis, onboarding, retention</li>
-    </ul>
-  </div>
-</section>
-
-<!-- CASE STUDIES -->
-<section id="case-studies" class="section">
-  <div class="container">
-    <h2>🚀 Customer Success Impact: Case Studies</h2>
-
-    <div class="card">
-      <strong>Scaling 0→70 with 97% Retention</strong>
-      <p>Lifecycle management, health scoring, QBR cadence.</p>
-    </div>
-
-    <div class="card">
-      <strong>CRM Transformation (+35% Efficiency)</strong>
-      <p>Salesforce + HubSpot rollout across 14 states.</p>
-    </div>
-
-    <div class="card">
-      <strong>Onboarding Optimization (-30% Time-to-Value)</strong>
-      <p>Structured 30-day onboarding programs.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section alt-bg">
-  <div class="container">
-    <h2>🧠 Core Competencies</h2>
-
-    <p><strong>Customer Success:</strong> Onboarding, Retention, Expansion, QBRs, Health Scoring</p>
-    <p><strong>Revenue Operations:</strong> Salesforce, HubSpot, Forecasting, Dashboards</p>
-    <p><strong>Leadership:</strong> 0-to-1 Teams, Enablement, Coaching</p>
-    <p><strong>Compliance:</strong> GDPR, Data Privacy, Risk Management</p>
-  </div>
-</section>
-
-<!-- WHY WORK WITH ME -->
-<section class="section">
-  <div class="container">
-    <h2>Why Work With Me?</h2>
-    <p>97% retention. $2M+ expansion. Builder mindset. Immediate impact.</p>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <div class="container">
-    <h2>Let’s Talk About Customer Success</h2>
-    <p><strong>Available for immediate start. Based in Helsinki with valid work permit.</strong></p>
-    <a href="mailto:dhruvshah9197@gmail.com" class="btn-primary">Schedule a Call</a>
-  </div>
-</section>
-
-<footer>
-  © 2025 Dhruvin Shah | Customer Success & Revenue Operations Leader<br>
-  Based in Helsinki, Finland 🇫🇮 | Available for Immediate Start<br>
-  Last Updated: January 2025
-</footer>
-
-</body>
-</html>
+    /* Progress bars */
+    .skill{margin-bottom:12px}
+    .progress-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+    .label{font-weight:700;color:#0f1724}
+    .bar{background:#e6eef0;height:14px;border-radius:999px;overflow:hidden}
+    .bar > span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--primary),var(--accent));border
