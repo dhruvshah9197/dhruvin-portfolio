@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhruvin Shah | Customer Success & Revenue Operations Leader | Helsinki</title>
-    <meta name="description" content="Customer Success & Revenue Operations leader with 9+ years scaling B2B SaaS teams. 97% retention rate. Enterprise account management specialist. Based in Helsinki, Finland. Available for Customer Success Manager, Revenue Operations, and Sales Operations roles.">
+    <meta name="description" content="Customer Success & Revenue Operations leader with 9+ years scaling B2B SaaS teams. 97% retention rate. Based in Helsinki. Specializing in enterprise account management, CRM optimization, and team scaling.">
     <meta name="keywords" content="customer success manager, revenue operations, SaaS, B2B, Helsinki, Finland, Salesforce, HubSpot, team scaling, CRM implementation, enterprise account management, customer retention, sales operations, fintech">
+    
     <meta property="og:title" content="Dhruvin Shah | Customer Success & Revenue Operations Leader">
     <meta property="og:description" content="9+ years driving B2B SaaS growth. 97% client retention. Enterprise account management specialist based in Helsinki.">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="headshot.jpg">
 
     <style>
         :root {
@@ -51,6 +52,7 @@
         a {
             color: inherit;
             text-decoration: none;
+            transition: var(--transition-fast);
         }
 
         img {
@@ -66,21 +68,20 @@
         }
 
         section {
-            margin: 4rem 0;
+            margin: 5rem 0;
             position: relative;
-        }
-
-        section:first-of-type {
-            margin-top: 6.25rem;
+            scroll-margin-top: 100px;
         }
 
         h1, h2, h3, h4 {
             margin: 0 0 0.75rem;
             letter-spacing: 0.02em;
+            color: #fff;
         }
 
         h1 {
             font-size: clamp(2.4rem, 3.2vw + 1rem, 3.4rem);
+            line-height: 1.1;
         }
 
         h2 {
@@ -101,39 +102,22 @@
             text-transform: uppercase;
             letter-spacing: 0.18em;
             color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         .tagline {
-            font-size: 0.98rem;
-            color: var(--text-muted);
-        }
-
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.25rem 0.9rem;
-            border-radius: var(--radius-pill);
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.17em;
-            background: rgba(15,23,42,0.85);
-            border: 1px solid rgba(148,163,184,0.4);
-        }
-
-        .pill-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, #6ee7b7 0, #22c55e 45%, #064e3b 100%);
-            box-shadow: 0 0 0 4px rgba(34,197,94,0.35);
+            font-size: 1.1rem;
+            color: #cbd5f5;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
         }
 
         /* Sticky nav */
         .nav-wrap {
             position: sticky;
             top: 0;
-            z-index: 30;
+            z-index: 100;
             backdrop-filter: blur(16px);
             background: radial-gradient(circle at top left, rgba(15,23,42,0.86), rgba(2,6,23,0.94));
             border-bottom: 1px solid rgba(148,163,184,0.2);
@@ -142,7 +126,7 @@
         nav {
             max-width: 1120px;
             margin: 0 auto;
-            padding: 0.6rem 1.25rem;
+            padding: 0.8rem 1.25rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -156,154 +140,33 @@
         }
 
         .nav-avatar {
-            width: 32px;
-            height: 32px;
-            border-radius: 40%;
-            background: radial-gradient(circle at 30% 30%, #4ade80 0, #22c55e 40%, #14532d 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #e5fdf4;
-            box-shadow: 0 8px 24px rgba(34,197,94,0.4);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--primary);
+            background: var(--bg-card);
+        }
+        
+        .nav-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .nav-name {
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .nav-role {
-            font-size: 0.76rem;
-            color: var(--text-muted);
-        }
+        .nav-name { font-size: 0.95rem; font-weight: 700; color: #fff; }
+        .nav-role { font-size: 0.75rem; color: var(--text-muted); }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 1.1rem;
-            font-size: 0.85rem;
+            gap: 1.5rem;
+            font-size: 0.9rem;
         }
 
-        .nav-links a {
-            position: relative;
-            padding: 0.2rem 0;
-            color: #cbd5f5;
-        }
+        .nav-links a:hover { color: var(--primary); }
 
-        .nav-links a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -0.18rem;
-            width: 0;
-            height: 2px;
-            border-radius: 999px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            transition: width var(--transition-fast);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-cta {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .btn-sm-outline {
-            border-radius: var(--radius-pill);
-            padding: 0.35rem 0.8rem;
-            border: 1px solid rgba(148,163,184,0.55);
-            font-size: 0.8rem;
-            color: #e2e8f0;
-            background: rgba(15,23,42,0.3);
-            backdrop-filter: blur(10px);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            transition: all var(--transition-med);
-        }
-
-        .btn-sm-outline:hover {
-            border-color: var(--primary);
-            color: #eff6ff;
-            box-shadow: 0 10px 30px rgba(37,99,235,0.35);
-            transform: translateY(-1px);
-        }
-
-        /* Hero */
-        .hero {
-            display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
-            gap: 2.5rem;
-            align-items: center;
-        }
-
-        .hero-main {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-heading-row {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-
-        .hero-title {
-            display: flex;
-            flex-direction: column;
-            gap: 0.15rem;
-        }
-
-        .hero-gradient-text {
-            background: linear-gradient(120deg, #e5e9ff, #7dd3fc, #bbf7d0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .hero-subtitle {
-            font-size: 1.05rem;
-            color: #cbd5f5;
-        }
-
-        .hero-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-            margin: 1rem 0 1.5rem;
-            font-size: 0.78rem;
-            color: var(--text-muted);
-        }
-
-        .hero-meta span {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.25rem 0.7rem;
-            border-radius: var(--radius-pill);
-            background: rgba(15,23,42,0.75);
-            border: 1px solid rgba(148,163,184,0.4);
-        }
-
-        .hero-meta span strong {
-            color: #e5e7eb;
-            font-weight: 600;
-        }
-
-        .hero-cta-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            margin: 1.75rem 0 1.1rem;
-        }
-
+        /* Buttons */
         .btn-primary {
             border-radius: var(--radius-pill);
             padding: 0.7rem 1.5rem;
@@ -315,14 +178,15 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            box-shadow: 0 18px 45px rgba(37,99,235,0.5);
-            transition: transform var(--transition-med), box-shadow var(--transition-med), filter var(--transition-med);
+            box-shadow: 0 10px 25px rgba(37,99,235,0.4);
+            transition: all var(--transition-med);
+            font-weight: 600;
         }
 
         .btn-primary:hover {
-            transform: translateY(-1.5px);
-            box-shadow: 0 24px 60px rgba(37,99,235,0.7);
-            filter: brightness(1.05);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(37,99,235,0.6);
+            filter: brightness(1.1);
         }
 
         .btn-outline {
@@ -331,7 +195,7 @@
             font-size: 0.9rem;
             border: 1px solid rgba(148,163,184,0.55);
             cursor: pointer;
-            background: rgba(15,23,42,0.75);
+            background: rgba(15,23,42,0.6);
             color: #e2e8f0;
             display: inline-flex;
             align-items: center;
@@ -341,1801 +205,931 @@
 
         .btn-outline:hover {
             border-color: var(--primary);
-            color: #eff6ff;
-            box-shadow: 0 14px 40px rgba(15,23,42,0.7);
-            transform: translateY(-1px);
+            color: #fff;
+            background: rgba(37,99,235,0.1);
+            transform: translateY(-2px);
         }
 
-        .hero-note {
-            font-size: 0.78rem;
-            color: var(--text-muted);
+        /* Hero */
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            gap: 3rem;
+            align-items: center;
+            margin-top: 3rem;
         }
 
-        .hero-note strong {
-            color: #e5e7eb;
+        .hero-gradient-text {
+            background: linear-gradient(120deg, #e5e9ff, #7dd3fc, #bbf7d0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
-        .hero-aside {
-            position: relative;
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+            font-size: 0.85rem;
         }
 
+        .hero-meta span {
+            padding: 0.35rem 0.8rem;
+            border-radius: 6px;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(148,163,184,0.2);
+            color: #e2e8f0;
+        }
+        
+        .hero-meta span strong { color: #fff; }
+
+        /* Profile Card (Right side of hero) */
         .profile-card {
-            position: relative;
             border-radius: 24px;
-            padding: 1.4rem 1.4rem 1.1rem;
-            background: radial-gradient(circle at top, rgba(37,99,235,0.35), rgba(15,23,42,0.96));
+            padding: 1.5rem;
+            background: radial-gradient(circle at top, rgba(37,99,235,0.15), rgba(15,23,42,0.8));
             box-shadow: var(--shadow-soft);
-            border: 1px solid rgba(148,163,184,0.4);
-            overflow: hidden;
-        }
-
-        .profile-badge {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 0.75rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .profile-badge-left {
-            display: flex;
-            gap: 0.6rem;
-            align-items: center;
-        }
-
-        .profile-photo {
-            width: 44px;
-            height: 44px;
-            border-radius: 18px;
-            background: radial-gradient(circle at 30% 30%, #60a5fa 0, #2563eb 32%, #4c1d95 100%);
-            border: 2px solid rgba(191,219,254,0.8);
-        }
-
-        .profile-name {
-            font-size: 0.96rem;
-            font-weight: 600;
-        }
-
-        .profile-role {
-            font-size: 0.78rem;
-            color: #cbd5f5;
-        }
-
-        .profile-badge-tag {
-            font-size: 0.7rem;
-            padding: 0.2rem 0.6rem;
-            border-radius: var(--radius-pill);
-            border: 1px solid rgba(59,130,246,0.7);
-            background: rgba(15,23,42,0.8);
-            color: #bfdbfe;
+            border: 1px solid rgba(148,163,184,0.2);
+            position: relative;
         }
 
         .profile-metrics {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 0.6rem;
-            margin: 0.9rem 0 0.6rem;
-            font-size: 0.75rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
+            margin-top: 1rem;
         }
 
         .profile-metric {
-            padding: 0.55rem 0.65rem;
+            padding: 0.8rem;
             border-radius: 12px;
-            border: 1px solid rgba(148,163,184,0.35);
-            background: rgba(15,23,42,0.8);
+            background: rgba(15,23,42,0.6);
+            border: 1px solid rgba(148,163,184,0.2);
+            text-align: center;
         }
 
         .profile-metric strong {
             display: block;
-            font-size: 0.9rem;
-            margin-bottom: 0.1rem;
+            font-size: 1.2rem;
+            color: #fff;
         }
-
-        .profile-badges-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-top: 0.5rem;
-        }
-
-        .mini-pill {
-            font-size: 0.7rem;
-            padding: 0.15rem 0.55rem;
-            border-radius: 999px;
-            background: rgba(15,23,42,0.9);
-            border: 1px solid rgba(148,163,184,0.4);
-            color: #cbd5f5;
-        }
-
-        .hero-orbit {
-            position: absolute;
-            inset: -40%;
-            opacity: 0.13;
-            background:
-                radial-gradient(circle at 20% 0, rgba(59,130,246,0.6), transparent 45%),
-                radial-gradient(circle at 100% 50%, rgba(52,211,153,0.7), transparent 46%),
-                radial-gradient(circle at 0 100%, rgba(250,204,21,0.4), transparent 50%);
-            filter: blur(2px);
-            pointer-events: none;
-        }
-
-        .hero-gradient {
-            position: fixed;
-            inset: 0;
-            background:
-                radial-gradient(circle at top left, rgba(56,189,248,0.11), transparent 55%),
-                radial-gradient(circle at bottom right, rgba(45,212,191,0.12), transparent 60%);
-            opacity: 0.65;
-            mix-blend-mode: screen;
-            pointer-events: none;
-            z-index: -1;
+        
+        .profile-metric span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
         }
 
         /* Banner */
         .banner {
-            border-radius: 16px;
-            padding: 0.85rem 1rem;
-            background: linear-gradient(90deg, rgba(56,189,248,0.16), rgba(45,212,191,0.08));
-            border: 1px solid rgba(125,211,252,0.7);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            background: linear-gradient(90deg, rgba(56,189,248,0.1), rgba(45,212,191,0.05));
+            border: 1px solid rgba(56,189,248,0.3);
             display: flex;
-            gap: 0.8rem;
+            gap: 1rem;
             align-items: flex-start;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #e0f2fe;
+            margin-bottom: 4rem;
         }
 
-        .banner-icon {
-            font-size: 1.1rem;
-            margin-top: 0.1rem;
-        }
-
-        .banner strong {
-            color: #e5f7ff;
-        }
-
-        /* Cards / sections */
-        .section-header {
-            margin-bottom: 1.4rem;
-        }
-
-        .section-subtitle {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
+        /* Cards & Grids */
         .card {
             border-radius: var(--radius-lg);
-            padding: 1.5rem 1.4rem;
-            background: radial-gradient(circle at top, rgba(15,23,42,0.96), rgba(15,23,42,0.94));
-            border: 1px solid rgba(148,163,184,0.3);
-            box-shadow: 0 22px 50px rgba(15,23,42,0.9);
+            padding: 1.75rem;
+            background: rgba(15,23,42,0.6);
+            border: 1px solid rgba(148,163,184,0.15);
+            transition: transform var(--transition-med);
         }
 
-        .grid-two {
-            display: grid;
-            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
-            gap: 1.75rem;
-        }
+        .grid-two { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+        .grid-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 
-        .grid-three {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1.2rem;
-        }
-
-        .grid-two-tight {
-            display: grid;
-            grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
-            gap: 1.7rem;
-        }
-
-        .list-bullets {
-            margin: 0.5rem 0 0;
-            padding-left: 1.1rem;
-        }
-
-        .list-bullets li {
-            margin-bottom: 0.45rem;
-            color: var(--text-muted);
-        }
-
-        /* Experience */
+        /* Experience Timeline */
         .exp-role {
-            margin-bottom: 1.7rem;
+            padding-left: 1.5rem;
+            border-left: 2px solid rgba(148,163,184,0.2);
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+        
+        .exp-role::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--primary);
+            box-shadow: 0 0 0 4px rgba(37,99,235,0.2);
         }
 
         .exp-header-row {
             display: flex;
             justify-content: space-between;
-            gap: 1rem;
-            flex-wrap: wrap;
             align-items: baseline;
-        }
-
-        .exp-company {
-            font-size: 0.95rem;
-            color: #e2e8f0;
-        }
-
-        .exp-meta {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .exp-pill-row {
-            display: flex;
+            margin-bottom: 0.5rem;
             flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-top: 0.5rem;
         }
 
-        .exp-pill {
-            font-size: 0.72rem;
-            padding: 0.18rem 0.55rem;
-            border-radius: 999px;
-            border: 1px solid rgba(148,163,184,0.35);
-            color: #cbd5f5;
-        }
+        .exp-company { font-size: 0.95rem; color: #93c5fd; font-weight: 500; }
+        .exp-meta { font-size: 0.85rem; color: var(--text-muted); }
+        .exp-block-title { font-weight: 600; color: #fff; margin: 1rem 0 0.5rem; font-size: 0.95rem; }
+        
+        .list-bullets { padding-left: 1.2rem; margin: 0; }
+        .list-bullets li { margin-bottom: 0.4rem; color: var(--text-muted); font-size: 0.95rem; }
 
-        .exp-block-title {
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin: 0.6rem 0 0.4rem;
-            color: #e5e7eb;
-        }
-
-        /* Skills & technical */
-        .pill-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-        }
-
-        .skill-pill {
-            font-size: 0.78rem;
-            padding: 0.3rem 0.65rem;
-            border-radius: 999px;
-            background: rgba(17,24,39,0.95);
-            border: 1px solid rgba(148,163,184,0.4);
-            color: #e5e7eb;
-        }
-
-        .skills-category {
-            margin-bottom: 1.4rem;
-        }
-
-        .skills-category h3 {
-            margin-bottom: 0.25rem;
-        }
-
-        .skills-category p {
-            margin-bottom: 0.35rem;
-        }
-
-        .inline-label {
-            font-weight: 600;
-            color: #e5e7eb;
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 1.2rem;
-        }
-
-        .progress-group {
-            margin-bottom: 1rem;
-        }
-
-        .progress-label {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.8rem;
-            margin-bottom: 0.25rem;
-            color: #e5e7eb;
-        }
-
-        .progress-bar {
-            position: relative;
-            width: 100%;
-            height: 7px;
-            border-radius: 999px;
-            background: rgba(15,23,42,0.9);
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            position: absolute;
-            inset: 0;
-            transform-origin: left;
-            transform: scaleX(0);
-            border-radius: inherit;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            box-shadow: 0 0 16px rgba(37,99,235,0.65);
-        }
-
-        /* Case studies */
+        /* Case Studies */
         .case-card {
-            border-radius: 18px;
-            padding: 1.4rem 1.35rem 1.2rem;
-            background: linear-gradient(135deg, rgba(15,23,42,0.97), rgba(8,25,54,0.97));
-            border: 1px solid rgba(148,163,184,0.55);
-            box-shadow: var(--shadow-soft);
+            background: rgba(15,23,42,0.8);
+            border: 1px solid rgba(148,163,184,0.2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            height: 100%;
         }
+        
+        .case-label { font-size: 0.8rem; color: #facc15; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .case-title { font-size: 1.1rem; color: #fff; margin-bottom: 1rem; line-height: 1.4; }
+        .case-section-title { font-size: 0.85rem; font-weight: 700; color: #94a3b8; margin-top: 1rem; text-transform: uppercase; }
 
-        .case-label {
+        /* Skills Pills */
+        .skill-pill {
             font-size: 0.8rem;
-            color: #93c5fd;
-            margin-bottom: 0.25rem;
+            padding: 0.35rem 0.8rem;
+            border-radius: 999px;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(148,163,184,0.2);
+            color: #e2e8f0;
+            display: inline-block;
+            margin: 0 0.4rem 0.4rem 0;
         }
 
-        .case-title {
-            font-size: 1rem;
-            margin-bottom: 0.6rem;
-        }
-
-        .case-section-title {
-            font-size: 0.86rem;
-            font-weight: 600;
-            margin: 0.65rem 0 0.35rem;
-            color: #e5e7eb;
-        }
-
-        .case-list {
-            margin: 0.15rem 0 0;
-            padding-left: 1.1rem;
-        }
-
-        .case-list li {
-            margin-bottom: 0.3rem;
-            color: var(--text-muted);
-            font-size: 0.88rem;
-        }
-
-        .case-learnings {
-            font-size: 0.86rem;
-            color: #e5e7eb;
-            margin-top: 0.55rem;
-        }
-
-        /* Stats / achievements */
-        .stats-intro {
-            margin-bottom: 1.1rem;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 0.9rem;
-        }
-
-        .stat-card {
-            border-radius: 14px;
-            padding: 0.9rem 0.85rem 0.7rem;
-            background: rgba(15,23,42,0.96);
-            border: 1px solid rgba(148,163,184,0.4);
-            text-align: left;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stat-value {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #e5f2ff;
-            margin-bottom: 0.15rem;
-        }
-
-        .stat-label {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-        }
-
-        .stat-tag {
-            position: absolute;
-            top: 0.6rem;
-            right: 0.65rem;
-            font-size: 0.62rem;
-            text-transform: uppercase;
-            letter-spacing: 0.13em;
-            color: #a5b4fc;
-        }
-
-        /* Certifications */
-        .cert-intro {
-            margin-bottom: 0.7rem;
-        }
-
-        .cert-list {
-            display: grid;
-            grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
-            gap: 0.6rem 1.2rem;
-            font-size: 0.9rem;
-        }
-
-        .cert-item strong {
-            color: #e5e7eb;
-        }
+        /* Progress Bars */
+        .progress-group { margin-bottom: 1.2rem; }
+        .progress-label { display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.4rem; color: #e2e8f0; }
+        .progress-bg { height: 8px; background: rgba(148,163,184,0.2); border-radius: 4px; overflow: hidden; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--secondary)); width: 0; transition: width 1.5s cubic-bezier(0.22, 0.61, 0.36, 1); }
 
         /* Videos */
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
         }
 
         .video-card {
+            background: #0f172a;
             border-radius: 16px;
-            padding: 0.85rem 0.85rem 0.9rem;
-            background: rgba(15,23,42,0.96);
-            border: 1px solid rgba(148,163,184,0.35);
-            display: flex;
-            flex-direction: column;
-            gap: 0.55rem;
-            transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-med);
-            cursor: pointer;
-        }
-
-        .video-thumb {
-            position: relative;
-            border-radius: 12px;
             overflow: hidden;
-            background: radial-gradient(circle at top, rgba(59,130,246,0.4), rgba(15,23,42,0.9));
-            min-height: 140px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border: 1px solid rgba(148,163,184,0.2);
+            transition: transform var(--transition-med);
+        }
+        
+        .video-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+
+        .video-embed-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            background: #000;
+        }
+        
+        .video-embed-container iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%; border: 0;
         }
 
-        .video-play {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, #f97316, #ea580c 45%, #7c2d12 100%);
-            box-shadow: 0 0 0 8px rgba(248,250,252,0.08), 0 16px 40px rgba(248,250,252,0.38);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        .video-info { padding: 1.25rem; }
+        .video-title { font-size: 1rem; font-weight: 600; color: #fff; margin-bottom: 0.5rem; }
+        .video-desc { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem; }
+        .video-skills { font-size: 0.75rem; color: #93c5fd; }
 
-        .video-play span {
-            margin-left: 2px;
-            border-style: solid;
-            border-width: 7px 0 7px 11px;
-            border-color: transparent transparent transparent #fefce8;
-        }
-
-        .video-title {
-            font-size: 0.95rem;
-            color: #e5e7eb;
-        }
-
-        .video-desc {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .video-skills {
-            font-size: 0.75rem;
-            color: #bfdbfe;
-        }
-
-        .video-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 45px rgba(15,23,42,0.9);
-            border-color: rgba(96,165,250,0.9);
-        }
-
-        /* Why work with me */
+        /* Why Me Grid */
         .why-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1rem;
         }
-
         .why-card {
-            border-radius: 16px;
-            padding: 1rem 1rem 0.9rem;
-            background: rgba(15,23,42,0.97);
-            border: 1px solid rgba(148,163,184,0.35);
+            padding: 1.2rem;
+            background: rgba(30, 41, 59, 0.4);
+            border-radius: 12px;
+            border: 1px solid rgba(148,163,184,0.1);
         }
 
-        .why-emoji {
-            font-size: 1.2rem;
-            margin-bottom: 0.3rem;
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
         }
-
-        .why-title {
-            font-size: 0.96rem;
-            margin-bottom: 0.4rem;
-            color: #e5e7eb;
+        
+        .stat-card {
+            background: rgba(15,23,42,0.8);
+            border: 1px solid rgba(148,163,184,0.2);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
         }
-
-        .why-text {
-            font-size: 0.86rem;
-            color: var(--text-muted);
-        }
-
-        /* What I'm looking for */
-        .check-list {
-            margin: 0.4rem 0 0;
-            padding-left: 1.1rem;
-        }
-
-        .check-list li {
-            margin-bottom: 0.35rem;
-            color: var(--text-muted);
-        }
+        
+        .stat-val { font-size: 1.8rem; font-weight: 700; color: #fff; display: block; }
+        .stat-lbl { font-size: 0.75rem; color: var(--text-muted); }
 
         /* Contact */
         .contact-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
-            gap: 1.6rem;
-            align-items: center;
-        }
-
-        .contact-note {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        .contact-points {
-            margin: 0.7rem 0 0.8rem;
-            padding-left: 1.1rem;
-            font-size: 0.88rem;
-        }
-
-        .contact-points li {
-            margin-bottom: 0.4rem;
-            color: var(--text-muted);
+            grid-template-columns: 1.5fr 1fr;
+            gap: 2rem;
         }
 
         .contact-form {
-            padding: 1.1rem 1.1rem 1rem;
+            background: rgba(30, 41, 59, 0.4);
+            padding: 1.5rem;
             border-radius: 16px;
-            background: rgba(15,23,42,0.97);
-            border: 1px solid rgba(148,163,184,0.4);
-            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(148,163,184,0.2);
         }
-
-        .form-row {
-            margin-bottom: 0.6rem;
-        }
-
-        .form-row label {
-            display: block;
-            font-size: 0.78rem;
-            margin-bottom: 0.25rem;
-            color: #e5e7eb;
-        }
-
-        .form-row input,
-        .form-row textarea {
+        
+        input, textarea {
             width: 100%;
-            border-radius: 10px;
-            border: 1px solid rgba(148,163,184,0.5);
-            background: rgba(15,23,42,0.95);
-            padding: 0.5rem 0.6rem;
-            color: #e5e7eb;
-            font-size: 0.85rem;
-            outline: none;
-            transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
-        }
-
-        .form-row input:focus,
-        .form-row textarea:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 1px rgba(37,99,235,0.5);
-            background: rgba(15,23,42,1);
-        }
-
-        .form-row textarea {
-            min-height: 110px;
-            resize: vertical;
-        }
-
-        .form-note {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            margin-top: 0.3rem;
-        }
-
-        /* Testimonials placeholder */
-        .testimonials-placeholder {
-            border-radius: 16px;
-            padding: 1.25rem 1.2rem;
-            border: 1px dashed rgba(148,163,184,0.6);
-            background: rgba(15,23,42,0.7);
-            font-size: 0.86rem;
-            color: var(--text-muted);
-        }
-
-        /* Social proof logos placeholder */
-        .logos-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            align-items: center;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .logo-pill {
-            padding: 0.35rem 0.75rem;
-            border-radius: 999px;
-            background: rgba(15,23,42,0.96);
-            border: 1px solid rgba(148,163,184,0.4);
-            color: #e5e7eb;
-        }
-
-        /* Back to top */
-        .back-to-top {
-            position: fixed;
-            right: 1.5rem;
-            bottom: 1.5rem;
-            width: 38px;
-            height: 38px;
-            border-radius: 999px;
-            background: radial-gradient(circle at 30% 30%, #60a5fa, #2563eb 50%, #1e3a8a 100%);
-            box-shadow: 0 16px 40px rgba(37,99,235,0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            color: #f9fafb;
-            font-size: 1.1rem;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity var(--transition-fast), transform var(--transition-fast);
-            z-index: 40;
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            pointer-events: auto;
-            transform: translateY(0);
-        }
-
-        .back-to-top:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Scroll reveal */
-        .reveal {
-            opacity: 0;
-            transform: translateY(18px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(148,163,184,0.3);
+            padding: 0.8rem;
+            border-radius: 8px;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-family: inherit;
         }
 
         /* Footer */
         footer {
-            border-top: 1px solid rgba(148,163,184,0.35);
-            padding: 1.1rem 1.25rem 1.6rem;
-            margin-top: 3rem;
-            font-size: 0.8rem;
-            color: var(--text-muted);
+            border-top: 1px solid rgba(148,163,184,0.2);
+            margin-top: 4rem;
+            padding: 2rem 0;
             text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
         }
 
-        footer strong {
-            color: #e5e7eb;
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
         }
-
-        footer .footer-row {
-            margin-bottom: 0.25rem;
-        }
+        .reveal.active { opacity: 1; transform: translateY(0); }
 
         /* Responsive */
-        @media (max-width: 960px) {
-            .hero {
-                grid-template-columns: minmax(0, 1fr);
-            }
-            .hero-aside {
-                order: -1;
-            }
-            .grid-two,
-            .grid-two-tight,
-            .contact-grid {
-                grid-template-columns: minmax(0, 1fr);
-            }
-            .video-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-            .why-grid,
-            .stats-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-            .cert-list {
-                grid-template-columns: minmax(0, 1fr);
-            }
-            nav {
-                flex-wrap: wrap;
-                row-gap: 0.6rem;
-            }
-            .nav-links {
-                display: none;
-            }
-            section {
-                margin: 3.2rem 0;
-            }
+        @media (max-width: 900px) {
+            .hero { grid-template-columns: 1fr; }
+            .grid-two, .grid-three, .contact-grid, .stats-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
         }
-
-        @media (max-width: 640px) {
-            .page-wrap {
-                padding-inline: 1rem;
-            }
-            .video-grid,
-            .why-grid,
-            .stats-grid,
-            .tech-grid {
-                grid-template-columns: minmax(0, 1fr);
-            }
-            .profile-metrics {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-            .hero-cta-row {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .hero-cta-row .btn-primary,
-            .hero-cta-row .btn-outline {
-                justify-content: center;
-            }
+        @media (max-width: 600px) {
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .profile-metrics { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-<div class="hero-gradient"></div>
 
 <div class="nav-wrap">
     <nav>
         <div class="nav-left">
-            <div class="nav-avatar">DS</div>
+            <div class="nav-avatar">
+                <img src="headshot.jpg" alt="Dhruvin Shah" onerror="this.src='https://ui-avatars.com/api/?name=Dhruvin+Shah&background=2f80ed&color=fff'">
+            </div>
             <div>
                 <div class="nav-name">Dhruvin Shah</div>
-                <div class="nav-role">Customer Success & Revenue Operations Leader</div>
+                <div class="nav-role">CS & RevOps Leader</div>
             </div>
         </div>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
-            <a href="#case-studies">Case Studies</a>
+            <a href="#impact">Impact</a>
+            <a href="#videos">Showreel</a>
             <a href="#skills">Skills</a>
-            <a href="#videos">Videos</a>
-            <a href="#contact">Contact</a>
         </div>
-        <div class="nav-cta">
-            <a class="btn-sm-outline" href="#contact">
-                <span>Schedule a Call</span>
-            </a>
-        </div>
+        <a href="#contact" class="btn-primary">Schedule a Call</a>
     </nav>
 </div>
 
 <div class="page-wrap">
 
     <!-- Hero -->
-    <section id="top" class="hero">
-        <div class="hero-main reveal">
-            <span class="pill">
-                <span class="pill-dot"></span>
-                Open to Customer Success & Revenue Operations roles
-            </span>
-            <div style="height: 0.75rem;"></div>
-            <div class="hero-heading-row">
-                <div class="hero-title">
-                    <h1 class="hero-gradient-text">Customer Success & Revenue Operations Leader</h1>
-                    <p class="hero-subtitle">Transforming B2B SaaS customer journeys into predictable, scalable revenue engines.</p>
-                </div>
+    <section class="hero reveal">
+        <div>
+            <div style="display:inline-block; margin-bottom:1rem; padding:0.3rem 0.8rem; background:rgba(39,174,96,0.15); border:1px solid #27ae60; border-radius:99px; font-size:0.8rem; color:#4ade80;">
+                🟢 Available for roles in Finland & Remote EU
             </div>
+            <h1 class="hero-gradient-text">Customer Success & Revenue Operations Leader</h1>
             <p class="tagline">
                 B2B SaaS Growth Specialist | 97% Client Retention | Enterprise Account Management | Based in Helsinki 🇫🇮
             </p>
-
             <div class="hero-meta">
-                <span><strong>9+ years</strong> in B2B SaaS & FinTech customer success</span>
-                <span><strong>97% retention</strong> vs. 85% industry benchmark</span>
-                <span><strong>$2M+</strong> yearly expansion opportunities identified</span>
-                <span><strong>0 → 70</strong> team scaling across 14 US states</span>
+                <span>🚀 <strong>9+ Years</strong> B2B SaaS Growth</span>
+                <span>📈 <strong>$2M+</strong> Expansion Pipeline</span>
+                <span>👥 <strong>0→70</strong> Team Scaling</span>
             </div>
-
-            <div class="hero-cta-row">
-                <a href="#contact" class="btn-primary">
-                    <span>Schedule a Call</span>
-                    <span>↗</span>
-                </a>
-                <a href="https://www.linkedin.com/in/dhruvin-s-459197ab/" target="_blank" rel="noreferrer" class="btn-outline">
-                    <span>View LinkedIn Profile</span>
-                    <span>in</span>
-                </a>
-                <a href="Dhruvin_Shah_Resume.pdf" class="btn-outline">
-                    <span>Download Resume</span>
-                    <span>⬇</span>
-                </a>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="#contact" class="btn-primary">Schedule a Call</a>
+                <a href="https://www.linkedin.com/in/dhruvin-s-459197ab/" target="_blank" class="btn-outline">View LinkedIn Profile</a>
             </div>
-
-            <p class="hero-note">
-                <strong>Currently based in Helsinki with valid work permit.</strong> Open to Customer Success, Revenue Operations, and Sales Operations roles in B2B SaaS where English is the working language.
-            </p>
         </div>
-
-        <aside class="hero-aside reveal">
-            <div class="hero-orbit"></div>
-            <div class="profile-card">
-                <div class="profile-badge">
-                    <div class="profile-badge-left">
-                        <div class="profile-photo"></div>
-                        <div>
-                            <div class="profile-name">Dhruvin Shah</div>
-                            <div class="profile-role">Customer Success & Revenue Operations Leader</div>
-                        </div>
-                    </div>
-                    <div class="profile-badge-tag">Helsinki 🇫🇮</div>
+        
+        <div class="profile-card reveal">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                <div class="nav-avatar" style="width: 60px; height: 60px;">
+                    <img src="headshot.jpg" alt="Dhruvin Shah" onerror="this.src='https://ui-avatars.com/api/?name=Dhruvin+Shah&background=2f80ed&color=fff'">
                 </div>
-                <div class="profile-metrics">
-                    <div class="profile-metric">
-                        <strong class="stat-number" data-target="97">0%</strong>
-                        <span>Client Retention</span>
-                    </div>
-                    <div class="profile-metric">
-                        <strong class="stat-number" data-target="35">0%</strong>
-                        <span>Efficiency Gain</span>
-                    </div>
-                    <div class="profile-metric">
-                        <strong class="stat-number" data-target="2">€0M+</strong>
-                        <span>Expansion Pipeline</span>
-                    </div>
-                    <div class="profile-metric">
-                        <strong class="stat-number" data-target="70">0</strong>
-                        <span>Team Members</span>
-                    </div>
-                    <div class="profile-metric">
-                        <strong class="stat-number" data-target="14">0</strong>
-                        <span>US States</span>
-                    </div>
-                    <div class="profile-metric">
-                        <strong class="stat-number" data-target="600">0</strong>
-                        <span>Enterprise Clients</span>
-                    </div>
-                </div>
-                <div class="profile-badges-row">
-                    <span class="mini-pill">Customer Success Playbooks</span>
-                    <span class="mini-pill">Salesforce & HubSpot</span>
-                    <span class="mini-pill">Enterprise Account Management</span>
-                    <span class="mini-pill">GDPR & Compliance</span>
+                <div>
+                    <strong style="color: white; font-size: 1.1rem;">Dhruvin Shah</strong>
+                    <div style="font-size: 0.85rem; color: #a0aec0;">Helsinki, Finland 🇫🇮</div>
                 </div>
             </div>
-        </aside>
+            <div class="profile-metrics">
+                <div class="profile-metric">
+                    <strong class="stat-number" data-target="97">0%</strong>
+                    <span>Retention Rate</span>
+                </div>
+                <div class="profile-metric">
+                    <strong class="stat-number" data-target="35">0%</strong>
+                    <span>Efficiency Gain</span>
+                </div>
+                <div class="profile-metric">
+                    <strong class="stat-number" data-target="600">0</strong>
+                    <span>Enterprise Clients</span>
+                </div>
+                <div class="profile-metric">
+                    <strong class="stat-number" data-target="14">0</strong>
+                    <span>US States</span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Banner -->
-    <section class="reveal">
-        <div class="banner">
-            <div class="banner-icon">📌</div>
-            <div>
-                <strong>Currently exploring Customer Success opportunities with AI-powered B2B SaaS companies</strong>
-                in the deal sourcing, M&A, private equity, and financial technology space. Open to roles focused on enterprise account management, revenue operations, and customer success team leadership.
-            </div>
+    <div class="banner reveal">
+        <span style="font-size: 1.2rem;">📌</span>
+        <div>
+            <strong>Currently exploring Customer Success opportunities with AI-powered B2B SaaS companies</strong> in the deal sourcing, M&A, private equity, and financial technology space. Open to roles focused on enterprise account management, revenue operations, and customer success team leadership.
         </div>
-    </section>
+    </div>
 
     <!-- About -->
     <section id="about" class="reveal">
-        <div class="section-header">
-            <div class="eyebrow">About</div>
-            <h2>Customer Success & Revenue Operations Leader</h2>
-        </div>
+        <div class="eyebrow">About Me</div>
+        <h2>Customer Success & Revenue Operations Leader</h2>
         <div class="card">
             <p>
-                With 9+ years driving sustainable growth in B2B SaaS and FinTech across North America and EU markets, Dhruvin specializes in building scalable customer success operations that drive retention, expansion, and revenue growth.
+                With 9+ years driving sustainable growth in B2B SaaS and FinTech across North America and EU markets, I specialize in building scalable customer success operations that drive retention, expansion, and revenue growth.
             </p>
-            <h3 style="margin-top: 1.1rem;">What I Bring:</h3>
-
-            <p><span class="inline-label">Customer Success at Scale:</span> Built and managed 600+ customer relationships with 97% retention rate (vs. 85% industry benchmark) through systematic onboarding, health monitoring, and proactive engagement strategies.</p>
-            <p><span class="inline-label">Revenue Operations Excellence:</span> Implemented Salesforce and HubSpot CRM systems, designed sales processes, and built performance dashboards that improved team efficiency by 35% and sales performance by 25%.</p>
-            <p><span class="inline-label">Enterprise Account Management:</span> Managed $50M+ in client portfolios, conducted regular quarterly business reviews (QBRs), and identified $2M+ in annual expansion opportunities through data-driven account planning and strategic relationship management.</p>
-            <p><span class="inline-label">Team Scaling & Leadership:</span> Recruited, trained, and led 70-person distributed team across 14 US states, developing onboarding playbooks and enablement programs that reduced time-to-productivity by 30%.</p>
-            <p><span class="inline-label">Compliance & Risk Management:</span> Established GDPR-compliant frameworks across multi-jurisdiction operations, ensuring 100% regulatory adherence in highly regulated environments.</p>
-
-            <p style="margin-top: 0.9rem;">
-                <strong>Currently based in Helsinki with valid work permit.</strong> Seeking Customer Success Manager, Revenue Operations, or Sales Operations roles in B2B SaaS companies where English is the working language.
-            </p>
-            <p>
-                <span class="inline-label">My Ideal Role:</span> Fast-growing B2B SaaS company (seed to Series B) where Dhruvin can build and scale customer success operations, drive product adoption with enterprise clients, and contribute to revenue growth through retention and expansion strategies.
-            </p>
+            
+            <div class="grid-two" style="margin-top: 1.5rem;">
+                <div>
+                    <h4 style="color: #60a5fa;">What I Bring:</h4>
+                    <ul class="list-bullets">
+                        <li><strong>Customer Success at Scale:</strong> Built and managed 600+ customer relationships with 97% retention rate (vs. 85% industry benchmark).</li>
+                        <li><strong>Revenue Operations Excellence:</strong> Implemented Salesforce/HubSpot, improving team efficiency by 35%.</li>
+                        <li><strong>Enterprise Account Management:</strong> Managed $50M+ in client portfolios, identifying $2M+ in annual expansion.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #60a5fa;">Core Focus:</h4>
+                    <ul class="list-bullets">
+                        <li><strong>Team Scaling:</strong> Recruited and led 70-person distributed team across 14 US states.</li>
+                        <li><strong>Compliance:</strong> Established GDPR-compliant frameworks across multi-jurisdiction operations.</li>
+                        <li><strong>Based in Helsinki:</strong> Valid work permit. Seeking roles in B2B SaaS where English is the working language.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Experience -->
     <section id="experience" class="reveal">
-        <div class="section-header">
-            <div class="eyebrow">Experience</div>
-            <h2>Leadership in Customer Success & Revenue Operations</h2>
-        </div>
+        <div class="eyebrow">Career History</div>
+        <h2>Professional Experience</h2>
         <div class="card">
-            <!-- Role 1 -->
+            <!-- Job 1 -->
             <div class="exp-role">
                 <div class="exp-header-row">
-                    <div>
-                        <h3>Senior Marketing Director / Financial Advisor</h3>
-                        <div class="exp-company">Transamerica Financial Advisers, San Jose, CA</div>
-                    </div>
-                    <div class="exp-meta">May 2019 – November 2025</div>
+                    <h3 style="margin:0;">Senior Marketing Director / Financial Advisor</h3>
+                    <span class="exp-meta">May 2019 – November 2025</span>
                 </div>
-                <div class="exp-pill-row">
-                    <span class="exp-pill">Customer Success Leadership</span>
-                    <span class="exp-pill">Enterprise Account Management</span>
-                    <span class="exp-pill">Revenue Operations</span>
-                    <span class="exp-pill">Salesforce & HubSpot</span>
-                    <span class="exp-pill">Team Scaling (0→70)</span>
-                </div>
-
-                <p style="margin-top: 0.6rem;">
-                    Built and scaled customer success operations for a B2B financial services platform, managing 600+ client relationships across 14 US states with a distributed team of 70 advisors. Implemented enterprise CRM systems, designed customer onboarding programs, and maintained industry-leading retention rates through data-driven account management.
+                <div class="exp-company">Transamerica Financial Advisers, San Jose, CA</div>
+                <p style="margin-top: 0.5rem;">
+                    Built and scaled customer success operations for a B2B financial services platform, managing 600+ client relationships across 14 US states with a distributed team of 70 advisors.
                 </p>
-
-                <div class="exp-block-title">Customer Success & Account Management:</div>
+                
+                <div class="exp-block-title">Customer Success & Account Management</div>
                 <ul class="list-bullets">
-                    <li>Achieved 97% client retention rate (12% above 85% industry benchmark) through systematic customer lifecycle management including structured onboarding, adoption tracking, health scoring, and proactive engagement.</li>
-                    <li>Conducted quarterly business reviews (QBRs) with 600+ enterprise clients, maintaining 95%+ CSAT scores and identifying $2M+ in annual expansion opportunities through strategic needs analysis.</li>
-                    <li>Designed and implemented onboarding programs that reduced customer time-to-productivity by 30% and improved new customer NPS scores, creating repeatable playbooks for advisor success.</li>
-                    <li>Managed high-touch enterprise accounts representing $50M+ in client assets, demonstrating expertise in relationship management, renewal strategies, and customer lifetime value (CLV) optimization.</li>
+                    <li>Achieved 97% client retention rate (12% above 85% industry benchmark) through systematic customer lifecycle management.</li>
+                    <li>Conducted QBRs with 600+ enterprise clients, maintaining 95%+ CSAT scores and identifying $2M+ expansion revenue.</li>
+                    <li>Designed onboarding programs reducing customer time-to-productivity by 30%.</li>
                 </ul>
 
-                <div class="exp-block-title">Revenue Operations & CRM Systems:</div>
+                <div class="exp-block-title">Revenue Operations & CRM Systems</div>
                 <ul class="list-bullets">
-                    <li>Led end-to-end CRM transformation initiative implementing Salesforce and HubSpot, building automated workflows, customer health scoring dashboards, and sales enablement tools that improved team efficiency by 35%.</li>
-                    <li>Created revenue forecasting models, pipeline management processes, and performance analytics across 14-state distributed operations.</li>
-                    <li>Designed compensation structures and incentive programs aligned with customer success metrics, directly contributing to 25% increase in sales productivity and 40% overall revenue growth.</li>
+                    <li>Led end-to-end CRM transformation (Salesforce & HubSpot), building automated workflows improving efficiency by 35%.</li>
+                    <li>Designed compensation structures contributing to 25% increase in sales productivity.</li>
                 </ul>
 
-                <div class="exp-block-title">Team Leadership & Enablement:</div>
+                <div class="exp-block-title">Team Leadership & Compliance</div>
                 <ul class="list-bullets">
-                    <li>Scaled distributed customer success team from 0 to 70 members through strategic recruiting, comprehensive training curriculum development, and performance management frameworks.</li>
-                    <li>Developed sales playbooks, customer success methodologies, and standardized enablement materials that established repeatable processes across the organization.</li>
-                    <li>Recognized as #1 Producer and #1 Recruiter in Northern California (2017–2018); earned Million-Dollar Agency Award (2020) and Chairman Award for 97% Client Persistency (2020).</li>
-                </ul>
-
-                <div class="exp-block-title">Compliance & Operations:</div>
-                <ul class="list-bullets">
-                    <li>Established multi-state regulatory compliance framework ensuring 100% adherence to SEC, FINRA, and state-level financial regulations across distributed operations.</li>
-                    <li>Implemented data privacy and security protocols managing sensitive client data for 600+ enterprise accounts in accordance with regulatory requirements including GDPR-equivalent standards.</li>
-                    <li>Conducted quarterly compliance audits and risk assessments, maintaining zero regulatory violations throughout entire tenure.</li>
-                </ul>
-
-                <div class="exp-block-title">Strategic Partnerships & Business Development:</div>
-                <ul class="list-bullets">
-                    <li>Led customer education and adoption programs for institutional clients (US National Guard) achieving 90% conversion ratio through consultative engagement and trust-building.</li>
-                    <li>Developed strategic partnerships with technology providers and financial institutions, creating integrated solution offerings that increased customer value and retention.</li>
+                    <li>Scaled distributed team from 0 to 70 members; developed sales playbooks and enablement materials.</li>
+                    <li>Established regulatory compliance framework ensuring 100% adherence to SEC/FINRA/GDPR standards.</li>
                 </ul>
             </div>
 
-            <!-- Role 2 -->
+            <!-- Job 2 -->
             <div class="exp-role">
                 <div class="exp-header-row">
-                    <div>
-                        <h3>Marketing Director / Financial Advisor</h3>
-                        <div class="exp-company">Transamerica Financial Advisers, San Jose, CA</div>
-                    </div>
-                    <div class="exp-meta">March 2017 – May 2019</div>
+                    <h3 style="margin:0;">Marketing Director / Financial Advisor</h3>
+                    <span class="exp-meta">March 2017 – May 2019</span>
                 </div>
-                <div class="exp-pill-row">
-                    <span class="exp-pill">Customer Acquisition</span>
-                    <span class="exp-pill">Revenue Operations</span>
-                    <span class="exp-pill">Sales Enablement</span>
-                    <span class="exp-pill">Portfolio Management</span>
-                </div>
-
-                <p style="margin-top: 0.6rem;">
-                    Scaled customer success operations from startup phase to 300+ client network through strategic go-to-market execution, customer acquisition programs, and team enablement—building the foundation for multi-state expansion and systematic revenue growth.
+                <div class="exp-company">Transamerica Financial Advisers, San Jose, CA</div>
+                <p style="margin-top: 0.5rem;">
+                    Scaled customer success operations from startup phase to 300+ client network through strategic go-to-market execution.
                 </p>
-
-                <div class="exp-block-title">Growth & Customer Acquisition:</div>
                 <ul class="list-bullets">
-                    <li>Developed and executed multi-channel customer acquisition strategy growing enterprise client base from 0 to 300+ relationships within 24 months through targeted campaigns and referral programs.</li>
-                    <li>Managed $50M+ in client portfolios under advisement, consistently exceeding revenue targets through proactive relationship management and strategic account planning.</li>
-                    <li>Created customer referral programs and engagement initiatives that generated 40% of new business through existing customer advocacy, demonstrating strong customer satisfaction and loyalty.</li>
-                </ul>
-
-                <div class="exp-block-title">Revenue Operations & Sales Enablement:</div>
-                <ul class="list-bullets">
-                    <li>Designed and delivered comprehensive training curriculum for 50+ advisors covering financial planning methodologies, sales processes, CRM utilization, compliance protocols, and customer success best practices.</li>
-                    <li>Built sales playbooks and standardized needs analysis frameworks improving advisor productivity, conversion rates, and client satisfaction metrics across the organization.</li>
-                    <li>Implemented performance tracking systems and dashboards to monitor KPIs including conversion rates, pipeline velocity, client retention, and revenue per advisor.</li>
-                </ul>
-
-                <div class="exp-block-title">Marketing & Customer Engagement:</div>
-                <ul class="list-bullets">
-                    <li>Led brand positioning and content strategy for wealth management services targeting middle-market professionals and business owners, establishing market presence.</li>
-                    <li>Executed educational seminar series and digital marketing campaigns generating qualified leads, increasing market visibility, and supporting customer acquisition goals.</li>
-                    <li>Developed client communication programs including newsletters, webinars, and one-on-one consultation offerings that enhanced customer engagement and product adoption.</li>
+                    <li>Developed customer acquisition strategy growing client base from 0 to 300+ in 24 months.</li>
+                    <li>Designed training curriculum for 50+ advisors covering CRM utilization and success best practices.</li>
+                    <li>Built sales playbooks improving advisor productivity and conversion rates.</li>
                 </ul>
             </div>
 
-            <!-- Role 3 -->
-            <div class="exp-role" style="margin-bottom: 0;">
+            <!-- Job 3 -->
+            <div class="exp-role" style="border:none; margin:0; padding:0;">
                 <div class="exp-header-row">
-                    <div>
-                        <h3>Licensed Financial Associate</h3>
-                        <div class="exp-company">Transamerica Financial Advisers, Fresno, CA</div>
-                    </div>
-                    <div class="exp-meta">October 2016 – March 2017</div>
+                    <h3 style="margin:0;">Licensed Financial Associate</h3>
+                    <span class="exp-meta">October 2016 – March 2017</span>
                 </div>
-                <div class="exp-pill-row">
-                    <span class="exp-pill">Client Service</span>
-                    <span class="exp-pill">Financial Planning</span>
-                    <span class="exp-pill">Operations & Compliance</span>
-                </div>
-
-                <p style="margin-top: 0.6rem;">
-                    Delivered comprehensive financial planning and advisory services to 100+ clients while contributing to team growth, operational excellence, and customer success initiatives in an early-career customer-facing role.
-                </p>
-
-                <div class="exp-block-title">Client Service & Relationship Management:</div>
-                <ul class="list-bullets">
-                    <li>Provided financial needs analysis, retirement planning, and investment advisory services to a diverse client base achieving 85% conversion rate from prospect to client through consultative selling approach.</li>
-                    <li>Conducted discovery meetings, developed customized financial plans, and presented recommendations using financial planning software (Advicent NaviPlan), demonstrating technical proficiency and client communication skills.</li>
-                    <li>Maintained ongoing client relationships through regular reviews, portfolio monitoring, and proactive communication ensuring high satisfaction and retention.</li>
-                </ul>
-
-                <div class="exp-block-title">Team Support & Collaboration:</div>
-                <ul class="list-bullets">
-                    <li>Supported onboarding and training of 15+ new advisors, sharing best practices for client acquisition, needs analysis, customer success methodology, and regulatory compliance.</li>
-                    <li>Collaborated with senior advisors on complex client cases, contributing research and analysis for high-net-worth planning scenarios and enterprise accounts.</li>
-                    <li>Participated in team meetings, case reviews, and professional development activities, building technical expertise in customer success and account management.</li>
-                </ul>
-
-                <div class="exp-block-title">Operations & Compliance:</div>
-                <ul class="list-bullets">
-                    <li>Maintained accurate client documentation and CRM records ensuring data integrity, customer satisfaction tracking, and full regulatory compliance.</li>
-                    <li>Completed required continuing education and licensing requirements including Series 6, 63, and state insurance certifications.</li>
-                    <li>Adhered to company policies, compliance procedures, and industry regulations in all client interactions and operational activities.</li>
+                <div class="exp-company">Transamerica Financial Advisers, Fresno, CA</div>
+                <ul class="list-bullets" style="margin-top: 0.5rem;">
+                    <li>Achieved 85% conversion rate from prospect to client through consultative selling.</li>
+                    <li>Supported onboarding of 15+ new advisors; maintained accurate CRM records for compliance.</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <!-- Case Studies -->
-    <section id="case-studies" class="reveal">
-        <div class="section-header">
-            <div class="eyebrow">Impact</div>
-            <h2>Customer Success Impact: Case Studies</h2>
-        </div>
+    <section id="impact" class="reveal">
+        <div class="eyebrow">Real Results</div>
+        <h2>Customer Success Impact: Case Studies</h2>
         <div class="grid-three">
             <!-- Case 1 -->
             <article class="case-card">
-                <div class="case-label">📈 Case Study 1</div>
+                <div class="case-label">📈 Scaling & Retention</div>
                 <h3 class="case-title">Scaling Operations 0→70 While Maintaining 97% Retention</h3>
-
-                <div class="case-section-title">The Challenge:</div>
-                <p>
-                    Build customer success operations from ground zero in a highly competitive financial services market where average industry retention was only 85%. Needed to scale rapidly while maintaining service quality and customer satisfaction.
-                </p>
-
-                <div class="case-section-title">My Approach:</div>
-                <ul class="case-list">
-                    <li>Implemented systematic customer lifecycle management with defined stages from onboarding through renewal.</li>
-                    <li>Created customer health scoring system tracking engagement, satisfaction, and usage metrics.</li>
-                    <li>Developed standardized onboarding playbooks reducing time-to-value by 30%.</li>
-                    <li>Built proactive outreach programs for at-risk accounts identified through data analysis.</li>
-                    <li>Established quarterly business review (QBR) cadence with all enterprise accounts.</li>
+                <p style="font-size: 0.9rem;"><strong>Challenge:</strong> Scale rapidly in a competitive market where avg retention was 85%.</p>
+                <div class="case-section-title">My Approach</div>
+                <ul class="list-bullets" style="font-size: 0.85rem;">
+                    <li>Implemented customer lifecycle management.</li>
+                    <li>Created health scoring system.</li>
+                    <li>Standardized onboarding playbooks.</li>
                 </ul>
-
-                <div class="case-section-title">Results Delivered:</div>
-                <ul class="case-list">
-                    <li>97% client retention rate (12 percentage points above 85% industry benchmark).</li>
-                    <li>Scaled team from 0 to 70 members across 14 states.</li>
-                    <li>Maintained 95%+ customer satisfaction scores throughout growth phase.</li>
-                    <li>$2M+ annual expansion revenue identified through strategic QBRs.</li>
+                <div class="case-section-title" style="color:#4ade80;">Results</div>
+                <ul class="list-bullets" style="font-size: 0.85rem;">
+                    <li>97% Retention rate.</li>
+                    <li>$2M+ Annual expansion revenue.</li>
+                    <li>Scaled to 70 members across 14 states.</li>
                 </ul>
-
-                <p class="case-learnings">
-                    <strong>Key Learnings:</strong> Success at scale requires systems, not heroics. By building repeatable processes, creating clear playbooks, and leveraging data for early intervention, the team maintained premium service quality while growing 70x. The customer health scoring system was critical—it enabled proactive rather than reactive engagement.
-                </p>
             </article>
 
             <!-- Case 2 -->
             <article class="case-card">
-                <div class="case-label">🔧 Case Study 2</div>
+                <div class="case-label">🔧 RevOps & CRM</div>
                 <h3 class="case-title">CRM Transformation Driving 35% Efficiency Gains</h3>
-
-                <div class="case-section-title">The Challenge:</div>
-                <p>
-                    Distributed team of 70+ advisors across 14 states lacked visibility into customer health, pipeline status, and performance metrics. Manual processes created inefficiencies, data inconsistencies, and missed opportunities for customer intervention.
-                </p>
-
-                <div class="case-section-title">My Approach:</div>
-                <ul class="case-list">
-                    <li>Led comprehensive evaluation of CRM platforms, selecting Salesforce + HubSpot integration.</li>
-                    <li>Designed custom workflows automating routine tasks (follow-ups, health checks, reporting).</li>
-                    <li>Built executive dashboards providing real-time visibility into customer metrics and team performance.</li>
-                    <li>Created training programs ensuring 100% team adoption within 90 days.</li>
-                    <li>Implemented change management strategy addressing resistance and building buy-in.</li>
+                <p style="font-size: 0.9rem;"><strong>Challenge:</strong> Lack of visibility into customer health and pipeline metrics.</p>
+                <div class="case-section-title">My Approach</div>
+                <ul class="list-bullets" style="font-size: 0.85rem;">
+                    <li>Salesforce + HubSpot integration.</li>
+                    <li>Automated routine workflows.</li>
+                    <li>Built executive dashboards.</li>
                 </ul>
-
-                <div class="case-section-title">Results Delivered:</div>
-                <ul class="case-list">
-                    <li>35% improvement in team efficiency through automation and streamlined processes.</li>
-                    <li>25% increase in sales performance through better pipeline visibility and coaching.</li>
-                    <li>Real-time customer health monitoring enabling proactive intervention.</li>
-                    <li>Reduced administrative time allowing advisors to focus on high-value customer activities.</li>
+                <div class="case-section-title" style="color:#4ade80;">Results</div>
+                <ul class="list-bullets" style="font-size: 0.85rem;">
+                    <li>35% Efficiency improvement.</li>
+                    <li>25% Sales performance increase.</li>
+                    <li>Real-time health monitoring.</li>
                 </ul>
-
-                <p class="case-learnings">
-                    <strong>Key Learnings:</strong> Technology is only 30% of the solution—people and process are 70%. The CRM implementation succeeded by emphasizing change management, comprehensive training, and workflows that matched how the team actually worked, with user adoption prioritized over technical deployment.
-                </p>
             </article>
 
             <!-- Case 3 -->
             <article class="case-card">
-                <div class="case-label">⚡ Case Study 3</div>
+                <div class="case-label">⚡ Onboarding</div>
                 <h3 class="case-title">Onboarding Optimization Reducing Time-to-Value by 30%</h3>
-
-                <div class="case-section-title">The Challenge:</div>
-                <p>
-                    New customers were taking too long to achieve first value, creating early churn risk and delaying expansion opportunities. Inconsistent onboarding experiences across team members produced variable satisfaction.
-                </p>
-
-                <div class="case-section-title">My Approach:</div>
-                <ul class="case-list">
-                    <li>Mapped existing customer journey, identifying friction points and value milestones.</li>
-                    <li>Designed structured 30-day onboarding program with clear phases and success criteria.</li>
-                    <li>Created customer-facing onboarding portal with progress tracking and resource library.</li>
-                    <li>Developed internal playbooks ensuring consistent delivery across all team members.</li>
-                    <li>Implemented milestone-based check-ins and feedback loops to drive continuous improvement.</li>
+                <p style="font-size: 0.9rem;"><strong>Challenge:</strong> Slow time-to-value creating early churn risk.</p>
+                <div class="case-section-title">My Approach</div>
+                <ul class="list-bullets" style="font-size: 0.85rem;">
+                    <li>Structured 30-day onboarding program.</li>
+                    <li>Customer-facing progress portal.</li>
+                    <li>Milestone-based check-ins.</li>
                 </ul>
-
-                <div class="case-section-title">Results Delivered:</div>
-                <ul class="case-list">
-                    <li>30% reduction in time-to-productivity for new customers.</li>
-                    <li>Improved NPS scores during critical first 90 days.</li>
-                    <li>Standardized onboarding experience across 70-person distributed team.</li>
-                    <li>Higher early adoption rates leading to increased expansion revenue.</li>
+                <div class="case-section-title" style="color:#4ade80;">Results</div>
+                <ul class="list-bullets" style="font-size: 0.85rem;">
+                    <li>30% Reduction in time-to-productivity.</li>
+                    <li>Improved early NPS scores.</li>
+                    <li>Standardized delivery across team.</li>
                 </ul>
-
-                <p class="case-learnings">
-                    <strong>Key Learnings:</strong> The first 30 days define the entire customer relationship. By creating structure, setting clear expectations, and celebrating early wins, onboarding became a strategic revenue driver rather than an administrative step, balancing automation with high-touch human engagement at key moments.
-                </p>
             </article>
         </div>
     </section>
 
-    <!-- Skills / Core Competencies -->
+    <!-- Skills -->
     <section id="skills" class="reveal">
-        <div class="section-header">
-            <div class="eyebrow">Skills</div>
-            <h2>Core Competencies</h2>
-        </div>
+        <div class="eyebrow">Competencies</div>
+        <h2>Skills & Toolkit</h2>
         <div class="card">
-            <!-- Customer Success & SaaS Operations -->
-            <div class="skills-category">
-                <h3>Customer Success & SaaS Operations</h3>
-                <p>
-                    Customer Onboarding & Adoption | Customer Health Monitoring | Churn Prevention & Retention | Expansion & Upsell Strategy | Quarterly Business Reviews (QBRs) | NPS/CSAT Management | Customer Lifecycle Management | Enterprise Account Management | Renewal Management | Product Adoption | Customer Education | Success Playbooks
-                </p>
-            </div>
+            <div class="grid-two">
+                <div>
+                    <h3>Core Competencies</h3>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="font-size: 0.9rem; color: #93c5fd;">Customer Success & SaaS Ops</h4>
+                        <span class="skill-pill">Onboarding & Adoption</span>
+                        <span class="skill-pill">Health Monitoring</span>
+                        <span class="skill-pill">Churn Prevention</span>
+                        <span class="skill-pill">QBRs</span>
+                        <span class="skill-pill">Enterprise Account Management</span>
+                    </div>
 
-            <!-- Revenue Operations & CRM -->
-            <div class="skills-category">
-                <h3>Revenue Operations & CRM</h3>
-                <p>
-                    Salesforce CRM Administration | HubSpot | CRM Implementation & Optimization | Sales Process Design | Pipeline Management & Forecasting | Revenue Forecasting & Analytics | Performance Dashboards | Sales Analytics | Compensation Design | Sales Enablement | Revenue Attribution | Funnel Optimization
-                </p>
-            </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="font-size: 0.9rem; color: #93c5fd;">Revenue Operations & CRM</h4>
+                        <span class="skill-pill">Salesforce Admin</span>
+                        <span class="skill-pill">HubSpot</span>
+                        <span class="skill-pill">Pipeline Forecasting</span>
+                        <span class="skill-pill">Sales Enablement</span>
+                        <span class="skill-pill">Sales Process Design</span>
+                    </div>
 
-            <!-- B2B SaaS & Enterprise Sales -->
-            <div class="skills-category">
-                <h3>B2B SaaS & Enterprise Sales</h3>
-                <p>
-                    Enterprise Account Management | Consultative Selling | Solution Positioning | Stakeholder Management | Multi-threading | Value Articulation | Business Case Development | Negotiation & Closing | Account Planning | Territory Management
-                </p>
-            </div>
+                    <div>
+                        <h4 style="font-size: 0.9rem; color: #93c5fd;">Leadership & Compliance</h4>
+                        <span class="skill-pill">0-to-1 Team Building</span>
+                        <span class="skill-pill">Distributed Management</span>
+                        <span class="skill-pill">GDPR Compliance</span>
+                        <span class="skill-pill">Risk Mitigation</span>
+                    </div>
+                </div>
 
-            <!-- Team Leadership & Scaling -->
-            <div class="skills-category">
-                <h3>Team Leadership & Scaling</h3>
-                <p>
-                    0-to-1 Team Building | Distributed Team Management | Recruiting & Hiring | Training Program Development | Onboarding Playbooks | Performance Management | Coaching & Mentoring | Cross-functional Collaboration | Change Management | Organizational Scaling
-                </p>
-            </div>
-
-            <!-- Compliance & Data Operations -->
-            <div class="skills-category">
-                <h3>Compliance & Data Operations</h3>
-                <p>
-                    GDPR Compliance | Data Privacy & Protection | Multi-jurisdiction Regulatory Compliance | Risk Assessment & Mitigation | Financial Regulatory Compliance | SOPs Development | Audit Management | Compliance Reporting
-                </p>
-            </div>
-
-            <!-- Technical Skills & Tools -->
-            <div class="skills-category" style="margin-bottom: 0;">
-                <h3>Technical Skills & Tools</h3>
-                <p><span class="inline-label">CRM & Sales Tools:</span> Salesforce | HubSpot | Pipeline Management Software</p>
-                <p><span class="inline-label">Data & Analytics:</span> SQL | Excel (Advanced) | Data Visualization | Business Intelligence</p>
-                <p><span class="inline-label">Financial Planning Tools:</span> Advicent NaviPlan | Thomson Reuters Eikon | Riskalyze</p>
-                <p><span class="inline-label">Productivity & Collaboration:</span> DocuSign | G Suite | Slack | Zoom | Project Management Tools</p>
+                <div>
+                    <h3>Technical Proficiencies</h3>
+                    
+                    <div style="margin-top: 1rem;">
+                        <div class="progress-group">
+                            <div class="progress-label"><span>Salesforce CRM</span><span>95%</span></div>
+                            <div class="progress-bg"><div class="progress-fill" data-width="95%"></div></div>
+                        </div>
+                        <div class="progress-group">
+                            <div class="progress-label"><span>HubSpot</span><span>90%</span></div>
+                            <div class="progress-bg"><div class="progress-fill" data-width="90%"></div></div>
+                        </div>
+                        <div class="progress-group">
+                            <div class="progress-label"><span>Excel (Advanced)</span><span>95%</span></div>
+                            <div class="progress-bg"><div class="progress-fill" data-width="95%"></div></div>
+                        </div>
+                        <div class="progress-group">
+                            <div class="progress-label"><span>Pipeline Management Tools</span><span>95%</span></div>
+                            <div class="progress-bg"><div class="progress-fill" data-width="95%"></div></div>
+                        </div>
+                        <div class="progress-group">
+                            <div class="progress-label"><span>Revenue Forecasting</span><span>92%</span></div>
+                            <div class="progress-bg"><div class="progress-fill" data-width="92%"></div></div>
+                        </div>
+                        <div class="progress-group">
+                            <div class="progress-label"><span>SQL & Analytics</span><span>80%</span></div>
+                            <div class="progress-bg"><div class="progress-fill" data-width="80%"></div></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Why Work With Me -->
     <section class="reveal">
-        <div class="section-header">
-            <div class="eyebrow">Fit</div>
-            <h2>Why Work With Me?</h2>
-        </div>
-        <div class="card">
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-emoji">🎯</div>
-                    <div class="why-title">Proven Track Record of Results</div>
-                    <p class="why-text">
-                        Dhruvin has 97% retention (12% above benchmark), $2M+ expansion revenue identified annually, 35% efficiency improvements, and multiple industry awards that demonstrate measurable, repeatable impact—not vanity metrics.
-                    </p>
-                </div>
-                <div class="why-card">
-                    <div class="why-emoji">🚀</div>
-                    <div class="why-title">Builder & Scaler Mindset</div>
-                    <p class="why-text">
-                        Thrives in 0-to-1 and early-stage growth environments, from building a team from scratch (0→70 members) to implementing new CRM systems and designing processes that scale with the business.
-                    </p>
-                </div>
-                <div class="why-card">
-                    <div class="why-emoji">📊</div>
-                    <div class="why-title">Data-Driven Decision Making</div>
-                    <p class="why-text">
-                        Lives in CRMs, builds custom dashboards, and uses metrics—from health scores to churn prediction—to guide decisions, balancing rigorous analytics with human judgment to drive revenue.
-                    </p>
-                </div>
-                <div class="why-card">
-                    <div class="why-emoji">🌍</div>
-                    <div class="why-title">Globally Experienced, Locally Based</div>
-                    <p class="why-text">
-                        Experience managing operations across 14 US states combined with a base in Helsinki and valid work permit brings international SaaS best practices to Nordic and EU markets.
-                    </p>
-                </div>
-                <div class="why-card">
-                    <div class="why-emoji">🤝</div>
-                    <div class="why-title">Customer-First Philosophy</div>
-                    <p class="why-text">
-                        Starts every decision with “Is this good for the customer?”—the mindset behind 97% retention and the kind of customer advocacy that turns users into the strongest sales channel.
-                    </p>
-                </div>
-                <div class="why-card">
-                    <div class="why-emoji">⚡</div>
-                    <div class="why-title">Immediate Impact & Fast Execution</div>
-                    <p class="why-text">
-                        Arrives with proven playbooks for onboarding, CRM optimization, team training, and success operations, allowing rapid ramp-up and visible value from day one.
-                    </p>
-                </div>
+        <div class="eyebrow">Value Proposition</div>
+        <h2>Why Work With Me?</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎯</div>
+                <h4 style="margin-bottom: 0.5rem;">Proven Results</h4>
+                <p style="font-size: 0.9rem;">97% retention (12% above benchmark), $2M+ expansion revenue, and 35% efficiency improvements.</p>
+            </div>
+            <div class="why-card">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🚀</div>
+                <h4 style="margin-bottom: 0.5rem;">Builder Mindset</h4>
+                <p style="font-size: 0.9rem;">Thrive in 0-to-1 environments. Scaled teams from 0→70 and implemented CRMs from scratch.</p>
+            </div>
+            <div class="why-card">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📊</div>
+                <h4 style="margin-bottom: 0.5rem;">Data-Driven</h4>
+                <p style="font-size: 0.9rem;">I balance rigorous analytics (health scores, churn prediction) with human judgment.</p>
+            </div>
+            <div class="why-card">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🌍</div>
+                <h4 style="margin-bottom: 0.5rem;">Helsinki Based</h4>
+                <p style="font-size: 0.9rem;">Global experience (14 US states) with a local Helsinki base and valid work permit.</p>
+            </div>
+            <div class="why-card">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🤝</div>
+                <h4 style="margin-bottom: 0.5rem;">Customer-First</h4>
+                <p style="font-size: 0.9rem;">Philosophy: "Is this good for the customer?" This mindset drives retention and advocacy.</p>
+            </div>
+            <div class="why-card">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">⚡</div>
+                <h4 style="margin-bottom: 0.5rem;">Fast Execution</h4>
+                <p style="font-size: 0.9rem;">Ready to run with proven playbooks for onboarding, training, and success operations.</p>
             </div>
         </div>
     </section>
 
-    <!-- Key Achievements & Metrics -->
+    <!-- Key Metrics -->
     <section class="reveal">
-        <div class="section-header">
-            <div class="eyebrow">Results</div>
-            <h2>Key Achievements & Impact Metrics</h2>
-        </div>
+        <div class="eyebrow">Impact</div>
+        <h2>Key Achievements & Metrics</h2>
+        <p style="max-width: 800px;">Throughout my career, I’ve consistently delivered measurable results across customer success, revenue operations, and team scaling initiatives.</p>
         <div class="card">
-            <p class="stats-intro">
-                Throughout Dhruvin’s career, measurable results have been delivered across customer success, revenue operations, and team scaling initiatives. These metrics represent real business impact, not vanity numbers.
-            </p>
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-tag">Retention</div>
-                    <div class="stat-value stat-number" data-target="97">0%</div>
-                    <div class="stat-label">Client Retention Rate</div>
+                    <span class="stat-val stat-number" data-target="97">0%</span>
+                    <span class="stat-lbl">Client Retention</span>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-tag">Efficiency</div>
-                    <div class="stat-value stat-number" data-target="35">0%</div>
-                    <div class="stat-label">Team Efficiency Improvement</div>
+                    <span class="stat-val stat-number" data-target="35">0%</span>
+                    <span class="stat-lbl">Efficiency Gain</span>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-tag">Growth</div>
-                    <div class="stat-value stat-number" data-target="25">0%</div>
-                    <div class="stat-label">Increase in Sales Performance</div>
+                    <span class="stat-val stat-number" data-target="25">0%</span>
+                    <span class="stat-lbl">Sales Perf. Increase</span>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-tag">Revenue</div>
-                    <div class="stat-value stat-number" data-target="2">€0M+</div>
-                    <div class="stat-label">Annual Expansion Opportunities</div>
+                    <span class="stat-val">$2M+</span>
+                    <span class="stat-lbl">Annual Expansion</span>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-tag">CSAT</div>
-                    <div class="stat-value">95%+</div>
-                    <div class="stat-label">Customer Satisfaction Scores</div>
+                    <span class="stat-val">95%+</span>
+                    <span class="stat-lbl">CSAT Score</span>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-tag">Portfolio</div>
-                    <div class="stat-value">$50M+</div>
-                    <div class="stat-label">Assets Under Management</div>
+                    <span class="stat-val">$50M+</span>
+                    <span class="stat-lbl">AUM Managed</span>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-tag">Onboarding</div>
-                    <div class="stat-value">30%</div>
-                    <div class="stat-label">Reduction in Time-to-Productivity</div>
+                    <span class="stat-val">30%</span>
+                    <span class="stat-lbl">Faster Onboarding</span>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-tag">Scale</div>
-                    <div class="stat-value">14</div>
-                    <div class="stat-label">US States | 600+ Enterprise Clients</div>
+                    <span class="stat-val">14</span>
+                    <span class="stat-lbl">US States Managed</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Technical Proficiencies -->
-    <section class="reveal">
-        <div class="section-header">
-            <div class="eyebrow">Technical</div>
-            <h2>Technical Proficiencies</h2>
-        </div>
-        <div class="card">
-            <div class="tech-grid">
-                <div>
-                    <h3>Customer Success Platforms</h3>
-                    <div class="progress-group">
-                        <div class="progress-label">
-                            <span>Salesforce CRM</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" data-progress="95"></div>
-                        </div>
-                    </div>
-                    <div class="progress-group">
-                        <div class="progress-label">
-                            <span>HubSpot</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" data-progress="90"></div>
-                        </div>
-                    </div>
-                    <div class="progress-group">
-                        <div class="progress-label">
-                            <span>Customer Success Software</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" data-progress="85"></div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h3>Analytics & Reporting</h3>
-                    <div class="progress-group">
-                        <div class="progress-label">
-                            <span>SQL</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" data-progress="80"></div>
-                        </div>
-                    </div>
-                    <div class="progress-group">
-                        <div class="progress-label">
-                            <span>Excel (Advanced)</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" data-progress="95"></div>
-                        </div>
-                    </div>
-                    <div class="progress-group">
-                        <div class="progress-label">
-                            <span>Data Visualization</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" data-progress="90"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="height: 1.2rem;"></div>
-            <div class="tech-grid">
-                <div>
-                    <h3>Sales & Operations Tools</h3>
-                    <div class="progress-group">
-                        <div class="progress-label">
-                            <span>Pipeline Management</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" data-progress="95"></div>
-                        </div>
-                    </div>
-                    <div class="progress-group">
-                        <div class="progress-label">
-                            <span>Revenue Forecasting</span>
-                            <span>92%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" data-progress="92"></div>
-                        </div>
-                    </div>
-                    <div class="progress-group">
-                        <div class="progress-label">
-                            <span>Performance Analytics</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" data-progress="95"></div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h3>Additional Tools</h3>
-                    <p class="contact-note">
-                        DocuSign, G Suite, Slack, Zoom, and modern project management tools support collaboration across distributed SaaS teams and ensure seamless cross-functional workflows.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional Highlights & Video Case Studies -->
+    <!-- Videos -->
     <section id="videos" class="reveal">
-        <div class="section-header">
-            <div class="eyebrow">Showreel</div>
-            <h2>Professional Highlights & Video Case Studies</h2>
-            <p class="section-subtitle">
-                Selected clips demonstrating customer success leadership, revenue operations excellence, enterprise account management, and training capabilities.
-            </p>
-        </div>
+        <div class="eyebrow">Showreel</div>
+        <h2>Professional Highlights & Video Case Studies</h2>
+        <p>Selected clips demonstrating customer success leadership, revenue operations excellence, and training capabilities.</p>
+        
         <div class="video-grid">
             <!-- Video 1 -->
-            <a class="video-card" href="VIMEO_LINK_1" target="_blank" rel="noreferrer">
-                <div class="video-thumb">
-                    <div class="video-play"><span></span></div>
+            <div class="video-card">
+                <div class="video-embed-container">
+                    <iframe src="https://player.vimeo.com/video/1148484705" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
-                <div class="video-title">Revenue Operations Excellence: Top Performer Recognition</div>
-                <div class="video-desc">
-                    Recognized for delivering top-quartile revenue operations performance across pipeline quality, conversion velocity, acquisition efficiency, and retention.
+                <div class="video-info">
+                    <div class="video-title">Revenue Operations Excellence</div>
+                    <div class="video-desc">Top performer recognition for pipeline quality, conversion velocity, and retention metrics.</div>
+                    <div class="video-skills">RevOps | Analytics | Process Optimization</div>
                 </div>
-                <div class="video-skills">
-                    Skills Demonstrated: Revenue Operations | Performance Analytics | Process Optimization | Sales Enablement
-                </div>
-            </a>
+            </div>
 
             <!-- Video 2 -->
-            <a class="video-card" href="VIMEO_LINK_2" target="_blank" rel="noreferrer">
-                <div class="video-thumb">
-                    <div class="video-play"><span></span></div>
+            <div class="video-card">
+                <div class="video-embed-container">
+                    <iframe src="https://player.vimeo.com/video/1148484716" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
-                <div class="video-title">Customer Success Leadership: Back-to-Back Top Performance</div>
-                <div class="video-desc">
-                    Second consecutive year achieving leading benchmarks across acquisition funnel, qualified pipeline, conversion rates, and revenue attribution.
+                <div class="video-info">
+                    <div class="video-title">CS Leadership: Top Performance</div>
+                    <div class="video-desc">Back-to-back top performance benchmarks across acquisition funnel and retention.</div>
+                    <div class="video-skills">CS Leadership | Pipeline Management | Consistency</div>
                 </div>
-                <div class="video-skills">
-                    Skills Demonstrated: Customer Success Management | Pipeline Management | Team Leadership | Consistent Execution
-                </div>
-            </a>
+            </div>
 
             <!-- Video 3 -->
-            <a class="video-card" href="VIMEO_LINK_3" target="_blank" rel="noreferrer">
-                <div class="video-thumb">
-                    <div class="video-play"><span></span></div>
+            <div class="video-card">
+                <div class="video-embed-container">
+                    <iframe src="https://player.vimeo.com/video/1148486743" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
-                <div class="video-title">Enterprise Account Management: Complex B2B Sales</div>
-                <div class="video-desc">
-                    Demonstrates systematic approach to enterprise onboarding and adoption: discovery, value articulation, compliance, stakeholder alignment, and decision readiness.
+                <div class="video-info">
+                    <div class="video-title">Enterprise Account Management</div>
+                    <div class="video-desc">Systematic approach to onboarding, compliance, stakeholder alignment, and adoption.</div>
+                    <div class="video-skills">Enterprise Sales | Stakeholder Mgmt | Value Articulation</div>
                 </div>
-                <div class="video-skills">
-                    Skills Demonstrated: Enterprise Account Management | Consultative Selling | Stakeholder Management | Compliance Navigation | Value Articulation
-                </div>
-            </a>
+            </div>
 
             <!-- Video 4 -->
-            <a class="video-card" href="VIMEO_LINK_4" target="_blank" rel="noreferrer">
-                <div class="video-thumb">
-                    <div class="video-play"><span></span></div>
+            <div class="video-card">
+                <div class="video-embed-container">
+                    <iframe src="https://player.vimeo.com/video/1148484727" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
-                <div class="video-title">Customer Education & Trust Building at Scale</div>
-                <div class="video-desc">
-                    Financial education programs for aviation security professionals in high-trust roles, emphasizing guidance and informed decision-making over pressure.
+                <div class="video-info">
+                    <div class="video-title">Customer Education at Scale</div>
+                    <div class="video-desc">Led financial education programs for high-trust roles, driving adoption through guidance.</div>
+                    <div class="video-skills">Customer Education | Trust Building | Presentation</div>
                 </div>
-                <div class="video-skills">
-                    Skills Demonstrated: Customer Education | Presentation Skills | Trust Building | Professional Audience Engagement
-                </div>
-            </a>
+            </div>
 
             <!-- Video 5 -->
-            <a class="video-card" href="VIMEO_LINK_5" target="_blank" rel="noreferrer">
-                <div class="video-thumb">
-                    <div class="video-play"><span></span></div>
+            <div class="video-card">
+                <div class="video-embed-container">
+                    <iframe src="https://player.vimeo.com/video/1148495036" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
-                <div class="video-title">High-Touch Customer Success: 90% Conversion Achievement</div>
-                <div class="video-desc">
-                    Advisory briefing to US Military personnel achieving 90% conversion from qualified pipeline to contracted accounts with clear, structured guidance.
+                <div class="video-info">
+                    <div class="video-title">High-Touch CS: 90% Conversion</div>
+                    <div class="video-desc">Advisory briefing achieving 90% conversion from qualified pipeline to contracted accounts.</div>
+                    <div class="video-skills">Consultative Selling | Needs Analysis | Conversion</div>
                 </div>
-                <div class="video-skills">
-                    Skills Demonstrated: Consultative Selling | Needs Analysis | Customer Education | Conversion Optimization | Complex Sales
-                </div>
-            </a>
+            </div>
 
             <!-- Video 6 -->
-            <a class="video-card" href="VIMEO_LINK_6" target="_blank" rel="noreferrer">
-                <div class="video-thumb">
-                    <div class="video-play"><span></span></div>
+            <div class="video-card">
+                <div class="video-embed-container">
+                    <iframe src="https://player.vimeo.com/video/1148490069" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
-                <div class="video-title">Sales Enablement & Team Training in Action</div>
-                <div class="video-desc">
-                    Mentoring session on customer acquisition fundamentals: disciplined outreach, buyer education, value articulation, and early-stage trust-building.
+                <div class="video-info">
+                    <div class="video-title">Sales Enablement & Training</div>
+                    <div class="video-desc">Mentoring on disciplined outreach, buyer education, and early-stage trust-building.</div>
+                    <div class="video-skills">Enablement | Coaching | Process Design</div>
                 </div>
-                <div class="video-skills">
-                    Skills Demonstrated: Sales Enablement | Coaching & Mentoring | Training Development | Process Design | Knowledge Transfer
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <!-- Professional Certifications -->
-    <section class="reveal">
-        <div class="section-header">
-            <div class="eyebrow">Credentials</div>
-            <h2>Professional Certifications & Continuous Learning</h2>
-        </div>
-        <div class="card">
-            <p class="cert-intro">
-                Committed to staying current with evolving best practices in customer success, revenue operations, and B2B SaaS growth strategies through continuous professional development.
-            </p>
-            <div class="cert-list">
-                <div class="cert-item"><strong>Certified Customer Success Manager (CCSM)</strong> – Success Coaching</div>
-                <div class="cert-item"><strong>Certified Revenue Operations Professional (CROP)</strong> – Revenue Collective</div>
-                <div class="cert-item"><strong>Salesforce AI Specialist Certification</strong> – Salesforce Trailhead</div>
-                <div class="cert-item"><strong>HubSpot Revenue Operations Certification</strong> – HubSpot Academy</div>
-                <div class="cert-item"><strong>FinTech Industry Professional (FTIP®)</strong> – Corporate Finance Institute</div>
-                <div class="cert-item"><strong>CFTE FinTech Masterclass</strong> – Centre for Finance, Technology & Entrepreneurship</div>
-
-                <!-- Additional certifications from previous stack can be listed here -->
-                <div class="cert-item">Additional licenses & certifications supporting work in regulated financial and SaaS environments.</div>
-                <div class="cert-item">Ongoing learning in AI, data analytics, and customer success best practices.</div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials placeholder -->
+    <!-- Certifications -->
     <section class="reveal">
-        <div class="section-header">
-            <div class="eyebrow">Social Proof</div>
-            <h2>Testimonials & Recommendations</h2>
-        </div>
+        <div class="eyebrow">Credentials</div>
+        <h2>Certifications & Learning</h2>
         <div class="card">
-            <div class="testimonials-placeholder">
-                This section is reserved for testimonials from managers, colleagues, and customers. Once LinkedIn recommendations or reference quotes are available, they can be added here to provide additional social proof for Dhruvin’s customer success and revenue operations impact.
-            </div>
-            <div style="height: 0.9rem;"></div>
-            <div class="logos-row">
-                <span class="logo-pill">Transamerica Financial Advisers</span>
-                <span class="logo-pill">Salesforce</span>
-                <span class="logo-pill">HubSpot</span>
-                <span class="logo-pill">FinTech & SaaS Ecosystem</span>
+            <p>Committed to staying current with evolving best practices in customer success, revenue operations, and B2B SaaS growth strategies.</p>
+            <div class="grid-two">
+                <ul class="list-bullets">
+                    <li><strong>Certified Customer Success Manager (CCSM)</strong> – Success Coaching</li>
+                    <li><strong>Certified Revenue Operations Professional (CROP)</strong> – Revenue Collective</li>
+                    <li><strong>Salesforce AI Specialist Certification</strong> – Salesforce Trailhead</li>
+                </ul>
+                <ul class="list-bullets">
+                    <li><strong>HubSpot Revenue Operations Certification</strong> – HubSpot Academy</li>
+                    <li><strong>FinTech Industry Professional (FTIP®)</strong> – Corporate Finance Institute</li>
+                    <li><strong>CFTE FinTech Masterclass</strong></li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- What I'm Looking For -->
+    <!-- Looking For -->
     <section class="reveal">
-        <div class="section-header">
-            <div class="eyebrow">Next Step</div>
-            <h2>What I’m Looking For</h2>
-        </div>
-        <div class="card">
-            <div class="grid-two-tight">
-                <div>
-                    <h3>Ideal Company Profile</h3>
-                    <ul class="check-list">
-                        <li>B2B SaaS company (Seed to Series B stage preferred).</li>
-                        <li>Product-led growth or sales-led with strong customer success focus.</li>
-                        <li>AI/ML, FinTech, or Enterprise Software sectors.</li>
-                        <li>International team with English as working language.</li>
-                        <li>Strong product-market fit with scaling challenges.</li>
-                        <li>Based in Helsinki or fully remote within EU time zones.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Ideal Role Characteristics</h3>
-                    <ul class="check-list">
-                        <li>Customer Success Manager, Revenue Operations, or Sales Operations leadership.</li>
-                        <li>Opportunity to build and/or scale customer success function.</li>
-                        <li>Cross-functional collaboration with Product, Sales, and Engineering.</li>
-                        <li>Data-driven culture focused on metrics and continuous improvement.</li>
-                        <li>Autonomy to implement best practices and drive strategic initiatives.</li>
-                    </ul>
-                </div>
+        <div class="eyebrow">Next Step</div>
+        <h2>What I’m Looking For</h2>
+        <div class="card grid-two">
+            <div>
+                <h3>Ideal Company</h3>
+                <ul class="list-bullets">
+                    <li>B2B SaaS (Seed to Series B preferred).</li>
+                    <li>Product-led growth or sales-led with CS focus.</li>
+                    <li>AI/ML, FinTech, or Enterprise Software.</li>
+                    <li>International team (English working language).</li>
+                    <li>Based in Helsinki or Remote EU.</li>
+                </ul>
             </div>
-            <div style="height: 0.9rem;"></div>
-            <h3>What I Value</h3>
-            <ul class="check-list">
-                <li>Impact over title, with focus on measurable outcomes.</li>
-                <li>Learning environment with continuous growth and development.</li>
-                <li>Collaborative, transparent, customer-obsessed team culture.</li>
-                <li>Work-life balance that supports sustainable, long-term success.</li>
-            </ul>
+            <div>
+                <h3>Ideal Role</h3>
+                <ul class="list-bullets">
+                    <li>Customer Success Manager, RevOps, or Sales Ops.</li>
+                    <li>Opportunity to build/scale CS functions.</li>
+                    <li>Cross-functional collaboration (Product/Sales).</li>
+                    <li>Data-driven culture with focus on metrics.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="reveal">
-        <div class="section-header">
-            <div class="eyebrow">Contact</div>
-            <h2>Let’s Talk About Customer Success</h2>
-        </div>
-        <div class="card contact-grid">
+        <div class="eyebrow">Contact</div>
+        <h2>Let’s Talk About Customer Success</h2>
+        <div class="contact-grid">
             <div>
-                <p><strong>Are you looking for a Customer Success or Revenue Operations leader who can hit the ground running?</strong></p>
-                <p class="contact-note">
-                    Dhruvin is currently exploring opportunities with B2B SaaS companies in Finland (or remote European roles) where he can:
-                </p>
-                <ul class="contact-points">
-                    <li>Build and scale customer success operations from the ground up or optimize existing teams.</li>
-                    <li>Drive retention and expansion revenue through data-driven account management.</li>
-                    <li>Implement customer-centric processes, CRM systems, and performance analytics.</li>
-                    <li>Lead and develop high-performing customer success and revenue operations teams.</li>
-                    <li>Bridge the gap between customers, product, and revenue teams.</li>
-                </ul>
-                <p class="contact-note">
-                    <strong>Available for immediate start. Based in Helsinki with valid work permit.</strong>
-                </p>
-                <div style="margin-top: 0.9rem; display:flex; flex-wrap:wrap; gap:0.6rem;">
-                    <a href="mailto:dhruvshah9197@gmail.com" class="btn-outline">
-                        <span>Email Dhruvin</span>
-                        <span>✉</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/dhruvin-s-459197ab/" target="_blank" rel="noreferrer" class="btn-outline">
-                        <span>Connect on LinkedIn</span>
-                        <span>in</span>
-                    </a>
-                    <a href="Dhruvin_Shah_Resume.pdf" class="btn-outline">
-                        <span>Download Resume</span>
-                        <span>⬇</span>
-                    </a>
+                <p><strong>Looking for a CS or RevOps leader who can hit the ground running?</strong></p>
+                <p>I’m currently exploring opportunities with B2B SaaS companies in Finland (or remote European roles) where I can build teams, drive retention, and optimize revenue engines.</p>
+                <p><strong>✅ Available for immediate start. Based in Helsinki with valid work permit.</strong></p>
+                
+                <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="mailto:dhruvshah9197@gmail.com" class="btn-primary">Email Dhruvin</a>
+                    <a href="https://www.linkedin.com/in/dhruvin-s-459197ab/" target="_blank" class="btn-outline">Connect on LinkedIn</a>
                 </div>
             </div>
-            <div>
-                <form class="contact-form">
-                    <div class="form-row">
-                        <label for="name">Name</label>
-                        <input id="name" type="text" placeholder="Your name">
-                    </div>
-                    <div class="form-row">
-                        <label for="company">Company</label>
-                        <input id="company" type="text" placeholder="Company name">
-                    </div>
-                    <div class="form-row">
-                        <label for="email">Work Email</label>
-                        <input id="email" type="email" placeholder="you@company.com">
-                    </div>
-                    <div class="form-row">
-                        <label for="message">How can Dhruvin help?</label>
-                        <textarea id="message" placeholder="Briefly describe your team, product, and what you’re looking for in Customer Success / Revenue Operations."></textarea>
-                    </div>
-                    <button type="button" class="btn-primary" style="width:100%; justify-content:center; margin-top:0.3rem;">
-                        <span>Schedule a Call</span>
-                    </button>
-                    <p class="form-note">
-                        This form is a visual element only. For fastest response, contact via email or LinkedIn.
-                    </p>
-                </form>
-            </div>
+            
+            <form class="contact-form">
+                <div style="margin-bottom: 1rem;">
+                    <label style="font-size:0.85rem; color:#a0aec0;">Name</label>
+                    <input type="text" placeholder="Recruiter / Manager Name">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label style="font-size:0.85rem; color:#a0aec0;">Email</label>
+                    <input type="email" placeholder="email@company.com">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label style="font-size:0.85rem; color:#a0aec0;">How can I help?</label>
+                    <textarea rows="3" placeholder="I'd love to chat about..."></textarea>
+                </div>
+                <button type="button" class="btn-primary" style="width:100%; justify-content: center;">Schedule a Call</button>
+                <p style="font-size:0.75rem; color:#64748b; margin-top:0.5rem; text-align:center;">(Visual form only. Please use email button.)</p>
+            </form>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <div class="footer-row">
-            © 2025 <strong>Dhruvin Shah</strong> | Customer Success & Revenue Operations Leader
-        </div>
-        <div class="footer-row">
-            Based in Helsinki, Finland 🇫🇮 | Available for Immediate Start
-        </div>
-        <div>Last Updated: January 2025</div>
+        <p>© 2025 Dhruvin Shah | Customer Success & Revenue Operations Leader</p>
+        <p>Based in Helsinki, Finland 🇫🇮 | Available for Immediate Start</p>
+        <p style="font-size: 0.75rem; margin-top: 1rem;">Last Updated: January 2025</p>
     </footer>
+
 </div>
 
-<!-- Back to top -->
-<div class="back-to-top" id="backToTop">↑</div>
+<!-- Back to Top -->
+<div id="backToTop" style="position:fixed; bottom:2rem; right:2rem; width:40px; height:40px; background:var(--primary); border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; opacity:0; pointer-events:none; transition:0.3s; color:#fff;">↑</div>
 
 <script>
-    // Scroll reveal
+    // Scroll Reveal
     const revealElements = document.querySelectorAll('.reveal');
-    const statNumbers = document.querySelectorAll('.stat-number, .profile-metric .stat-number');
     const progressFills = document.querySelectorAll('.progress-fill');
-    const backToTop = document.getElementById('backToTop');
-
-    const options = {
-        threshold: 0.15
-    };
-
-    const onIntersect = (entries, observer) => {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-
-                // Animate stats when their container shows
-                if (entry.target.querySelector && entry.target.querySelector('.stat-number')) {
-                    animateStats();
-                }
-
+                entry.target.classList.add('active');
+                
                 // Animate progress bars
-                if (entry.target.querySelector && entry.target.querySelector('.progress-fill')) {
-                    animateProgress();
-                }
+                const bars = entry.target.querySelectorAll('.progress-fill');
+                bars.forEach(bar => {
+                    bar.style.width = bar.getAttribute('data-width');
+                });
+
+                // Animate stats
+                const stats = entry.target.querySelectorAll('.stat-number');
+                stats.forEach(stat => {
+                    animateStat(stat);
+                });
 
                 observer.unobserve(entry.target);
             }
         });
-    };
+    }, { threshold: 0.1 });
 
-    const observer = new IntersectionObserver(onIntersect, options);
     revealElements.forEach(el => observer.observe(el));
 
-    function animateStats() {
-        statNumbers.forEach(el => {
-            const target = parseInt(el.getAttribute('data-target'), 10);
-            if (!target || el.dataset.animated === 'true') return;
-            el.dataset.animated = 'true';
-
-            let prefix = '';
-            let suffix = '';
-            let baseText = el.textContent;
-
-            // Extract prefix / suffix
-            const match = baseText.match(/^([^0-9]*)([0-9]+)([^0-9%]*)$/);
-            if (match) {
-                prefix = match[1] || '';
-                suffix = match[3] || '';
+    function animateStat(el) {
+        const target = parseInt(el.getAttribute('data-target'));
+        if (!target) return;
+        
+        let count = 0;
+        const duration = 1500; 
+        const interval = 20;
+        const step = target / (duration / interval);
+        
+        const timer = setInterval(() => {
+            count += step;
+            if (count >= target) {
+                count = target;
+                clearInterval(timer);
             }
-            const duration = 1300;
-            const start = performance.now();
-
-            function update(now) {
-                const elapsed = now - start;
-                const progress = Math.min(elapsed / duration, 1);
-                const value = Math.floor(progress * target);
-                const display = prefix + value + (baseText.includes('%') ? '%' : '') + suffix;
-                el.textContent = display;
-                if (progress < 1) {
-                    requestAnimationFrame(update);
-                }
-            }
-            requestAnimationFrame(update);
-        });
+            el.innerText = Math.floor(count) + (el.innerText.includes('%') ? '%' : '');
+        }, interval);
     }
 
-    function animateProgress() {
-        progressFills.forEach(fill => {
-            if (fill.dataset.animated === 'true') return;
-            fill.dataset.animated = 'true';
-            const value = parseInt(fill.getAttribute('data-progress'), 10) || 0;
-            fill.style.transform = 'scaleX(' + (value / 100) + ')';
-            fill.style.transition = 'transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1)';
-        });
-    }
-
-    // Back to top behavior
+    // Back to top
+    const backToTop = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
-            backToTop.classList.add('visible');
+        if(window.scrollY > 500) {
+            backToTop.style.opacity = '1';
+            backToTop.style.pointerEvents = 'all';
         } else {
-            backToTop.classList.remove('visible');
+            backToTop.style.opacity = '0';
+            backToTop.style.pointerEvents = 'none';
         }
     });
-
     backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({top:0, behavior:'smooth'});
     });
 </script>
+
 </body>
 </html>
